@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/fms/form.css">
+
+</head>
+
+<body>
+
+    <section id="cover" class="c-signin" style="background-image: url(assets/images/hola.jpg);"></section>
+
+    <!-- Begin: Login form -->
+    <!-- <div id="login-blur" style="background-image: url(img/bg_common2.jpg);"></div> -->
+    <div id="login-f">
+        <div class="middle">
+            <div class="login-panel">
+                <div class="col">
+                    <h3> Chào mừng trở lại! </h3>
+                    <p class="sub-title"> Nhập email và mật khẩu xuống bên dưới </p>
+                    <p class="notification"> Thông báo!!! </p>
+                </div>
+                <form class="js-validation-signin">
+                    <div class="form-group">
+                        <div class="col">
+                            <div class="form-material floating">
+                                <input type="email" class="f-control" id="login-email" name="login-email" onchange="setLabelLogin()">
+                                <label for="login-username" id="l-login">
+                                    <i class="far fa-envelope fa-fw"></i>
+                                    Email
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col">
+                            <div class="form-material floating">
+                                <input type="password" class="f-control" id="login-password" name="login-password" onchange="setLabelPassword()">
+                                <label for="login-password" id="l-password">
+                                    <i class="fas fa-key fa-fw"></i>
+                                    Mật khẩu
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col">
+                            <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Ghi nhớ tài khoản</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col">
+                            <button type="submit" class="btn btn-sm">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;">
+                        <div class="col">
+                            <a class="link-effect mr-5" href="signup.html">
+                                <i class="fas fa-edit fa-fw"></i> Tạo tài khoản
+                            </a>
+                            <a class="link-effect" href="reminder_password.html">
+                                <i class="fas fa-lock fa-fw"></i> Quên mật khẩu?
+                            </a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- End: Login form -->
+
+    <!-- Bootstrap core JavaScript-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
+
+    <!-- <script src="assets/js/jquery/jquery.min.js"></script> -->
+    <script src="assets/js/bootstrap/popper.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Validate -->
+    <script src="assets/js/authentic/jquery.validate.min.js"></script>
+    <script src="assets/js/authentic/op_auth_signin.js"></script>
+
+    <script>
+        function setLabelLogin() {
+            var element = document.getElementById('l-login');
+            element.classList.add("focus-lable");
+        }
+
+        function setLabelPassword() {
+            var element = document.getElementById('l-password');
+            element.classList.add("focus-lable");
+        }
+    </script>
+
+
+</body>
+
+</html>
