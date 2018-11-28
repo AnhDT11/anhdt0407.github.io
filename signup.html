@@ -15,7 +15,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/fms/form.css">
 
-    <title>Đăng nhập</title>
+    <title>Đăng ký tài khoản</title>
 </head>
 
 <body>
@@ -25,8 +25,20 @@
                 <div class="logo text-center">
                     <a href="index.jsp">-FMS-</a>
                 </div>
-                <p class="notification"> ${message}&nbsp; </p>
+                <p class="notification"> &nbsp; </p>
                 <form action="login" method="post">
+                    <div class="form-group">
+                        <label>
+                            <i class="fas fa-user fa-fw"></i>
+                        </label>
+                        <input type="text" class="form-control" placeholder="Nhập họ & tên" name="txtFullName">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <i class="fas fa-code fa-fw"></i>
+                        </label>
+                        <input type="text" class="form-control" placeholder="Nhập MSSV" name="txtMssv">
+                    </div>
                     <div class="form-group">
                         <label>
                             <i class="far fa-envelope fa-fw"></i>
@@ -40,28 +52,48 @@
                         <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="txtPassword">
                     </div>
                     <div class="form-group">
+                        <label>
+                            <i class="fas fa-key fa-fw"></i>
+                        </label>
+                        <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" name="txtPasswordCf">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <i class="fas fa-phone fa-fw"></i>
+                        </label>
+                        <input type="text" class="form-control" placeholder="Nhập số điện thoại" name="txtMobile">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <i class="fas fa-graduation-cap fa-fw"></i>
+                        </label>
+                        <input type="number" class="form-control" placeholder="Sinh viên khóa?" name="txtGrade">
+                    </div>
+                    <div class="form-group">
                         <div class="col">
-                            <label class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" name="login-remember-me">
+                            <label class="custom-control custom-checkbox mr-3">
+                                <input type="radio" class="custom-control-input" name="gender" value="1">
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Ghi nhớ tài khoản</span>
+                                <span class="custom-control-description">Nam</span>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                                <input type="radio" class="custom-control-input" name="gender" value="0">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Nữ</span>
                             </label>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col">
                             <button type="submit" class="btn btn-sm">
-                                <i class="fas fa-sign-in-alt fa-fw mr-1"></i>Đăng nhập
+                                <i class="fas fa-edit fa-fw mr-1"></i>Đăng ký tài khoản
                             </button>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col">
-                            <a class="link-effect" href="signup.html">
-                                <i class="fas fa-edit fa-fw mr-1"></i>Đăng ký
-                            </a>
-                            <a class="link-effect float-right" href="reminder_password.html">
-                                <i class="fas fa-question fa-fw mr-1"></i>Quên mật khẩu?
+                            <a class="link-effect" href="signin.html">
+                                <i class="fas fa-sign-in-alt fa-fw mr-1"></i>Đăng nhập
                             </a>
                         </div>
                     </div>
