@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <!-- Required meta tags -->
@@ -15,44 +15,29 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/fms/form.css">
 
+    <title>Đăng nhập</title>
 </head>
 
 <body>
-
-    <section id="cover" class="c-signin" style="background-image: url(assets/images/hola.jpg);"></section>
-
-    <!-- Begin: Login form -->
-    <!-- <div id="login-blur" style="background-image: url(img/bg_common2.jpg);"></div> -->
-    <div id="login-f">
-        <div class="middle">
+    <div id="intro">
+        <div class="middle signin">
             <div class="login-panel">
-                <div class="col">
-                    <h3> Chào mừng trở lại! </h3>
-                    <p class="sub-title"> Nhập email và mật khẩu xuống bên dưới </p>
-                    <p class="notification"> Thông báo!!! </p>
+                <div class="logo text-center">
+                    <a href="index.jsp">FMS</a>
                 </div>
-                <form class="js-validation-signin">
+                <p class="notification"> ${message}&nbsp; </p>
+                <form action="login" method="post">
                     <div class="form-group">
-                        <div class="col">
-                            <div class="form-material floating">
-                                <input type="email" class="f-control" id="login-email" name="login-email" onchange="setLabelLogin()">
-                                <label for="login-username" id="l-login">
-                                    <i class="far fa-envelope fa-fw"></i>
-                                    Email
-                                </label>
-                            </div>
-                        </div>
+                        <label>
+                            <i class="far fa-envelope fa-fw"></i>
+                        </label>
+                        <input type="email" class="form-control" placeholder="Nhập Email" name="txtEmail">
                     </div>
                     <div class="form-group">
-                        <div class="col">
-                            <div class="form-material floating">
-                                <input type="password" class="f-control" id="login-password" name="login-password" onchange="setLabelPassword()">
-                                <label for="login-password" id="l-password">
-                                    <i class="fas fa-key fa-fw"></i>
-                                    Mật khẩu
-                                </label>
-                            </div>
-                        </div>
+                        <label>
+                            <i class="fas fa-key fa-fw"></i>
+                        </label>
+                        <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="txtPassword">
                     </div>
                     <div class="form-group">
                         <div class="col">
@@ -66,27 +51,31 @@
                     <div class="form-group">
                         <div class="col">
                             <button type="submit" class="btn btn-sm">
-                                <i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập
+                                <i class="fas fa-sign-in-alt fa-fw mr-1"></i>Đăng nhập
                             </button>
                         </div>
                     </div>
-                    <div class="form-group" style="margin-top: 10px;">
+                    <div class="form-group">
                         <div class="col">
-                            <a class="link-effect mr-5" href="signup.html">
-                                <i class="fas fa-edit fa-fw"></i> Tạo tài khoản
+                            <a class="link-effect" href="reminder_password.jsp">
+                                <i class="fas fa-question fa-fw mr-1"></i>Quên mật khẩu?
                             </a>
-                            <a class="link-effect" href="reminder_password.html">
-                                <i class="fas fa-lock fa-fw"></i> Quên mật khẩu?
+                            <a class="link-effect float-right" href="register.jsp">
+                                <i class="fas fa-edit fa-fw mr-1"></i>Đăng ký
                             </a>
                         </div>
                     </div>
-
                 </form>
+
             </div>
         </div>
-
     </div>
-    <!-- End: Login form -->
+
+    <footer>
+        <p>
+            © 2018-2019 FISE Management System - All Rights Reserved
+        </p>
+    </footer>
 
     <!-- Bootstrap core JavaScript-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -95,24 +84,6 @@
     <!-- <script src="assets/js/jquery/jquery.min.js"></script> -->
     <script src="assets/js/bootstrap/popper.min.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
-
-    <!-- Validate -->
-    <script src="assets/js/authentic/jquery.validate.min.js"></script>
-    <script src="assets/js/authentic/op_auth_signin.js"></script>
-
-    <script>
-        function setLabelLogin() {
-            var element = document.getElementById('l-login');
-            element.classList.add("focus-lable");
-        }
-
-        function setLabelPassword() {
-            var element = document.getElementById('l-password');
-            element.classList.add("focus-lable");
-        }
-    </script>
-
-
 </body>
 
 </html>
