@@ -23,7 +23,7 @@
     <div class="hero-content">
         <header class="site-header">
             <div class="top-header-bar">
-                <div class="container pr-0">
+                <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6 top-left">
                             <ul class="float-left">
@@ -50,7 +50,7 @@
                             </ul>
                         </div>
 
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-6 top-right">
                             <div class="header-bar-menu">
                                 <ul class="flex float-right">
                                     <li>
@@ -67,40 +67,39 @@
             </div>
 
             <div class="nav-bar">
-                <div class="container pr-0">
-                    <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="#">Navbar</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggler" aria-controls="toggler" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fas fa-bars"></i>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="toggler">
-                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">Trang chủ</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="course" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Khóa học
-                                        </a>
-                                    <div class="dropdown-menu" aria-labelledby="course">
-                                        <a class="dropdown-item" href="#">Javacore Basic</a>
-                                        <a class="dropdown-item" href="#">Javacore Advance</a>
-                                        <a class="dropdown-item" href="#">HTML/CSS</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Về chúng tôi</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Liên hệ</a>
-                                </li>
-                            </ul>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                <h1 class="site-title"><a href="index.html" rel="home">A<span>nest</span></a></h1>
+                            </div>
                         </div>
-                    </nav>
+
+                        <div class="col-3 col-lg-9 flex justify-content-end">
+                            <nav class="site-navigation flex justify-content-end">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li><a href="#">Trang chủ</a></li>
+                                    <li><a href="#">Khóa học</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Tuyển dụng</a></li>
+                                    <li><a href="#">Liên hệ</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="header-bar-cart">
+                                    <a href="#" class="flex justify-content-center align-items-center">
+                                        <span aria-hidden="true" class="icon_bag_alt"></span>
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
