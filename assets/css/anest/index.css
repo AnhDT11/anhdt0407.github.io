@@ -60,7 +60,7 @@
 }
 
 .top-header-bar .container ul li a:hover {
-    color: #3bac47;
+    color: #03bb65;
     text-decoration: none;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .site-title a span {
-    color: #3bac47;
+    color: #03bb65;
 }
 
 .site-navigation.show ul {
@@ -174,7 +174,7 @@
 
 .site-navigation ul li a:hover,
 .site-navigation ul li.active a {
-    color: #3bac47;
+    color: #03bb65;
 }
 
 .site-navigation ul li a {
@@ -209,7 +209,7 @@
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
-    color: #3bac47;
+    color: #03bb65;
     letter-spacing: 0.1em;
 }
 
@@ -239,7 +239,7 @@
 .hero-content-wrap .read-more a {
     display: inline-block;
     padding: 12px 40px;
-    border: 2px solid #3bac47;
+    border: 2px solid #03bb65;
     font-size: 13px;
     font-weight: bold;
     color: #fff;
@@ -251,11 +251,24 @@
 
 /* ----- Section course ----- */
 
+.top-title {
+    border-bottom: 4px solid #03bb65;
+    width: 80px;
+    margin-left: 3px;
+    margin-bottom: 10px;
+}
+
+.top-title i {
+    font-size: 24px;
+    color: #03bb65;
+    margin-left: 3px;
+}
+
 .title {
     color: #373737;
     font-weight: 500;
     font-size: 24px;
-    margin: 0 3px;
+    margin: 0 3px 20px;
 }
 
 #course {
@@ -267,12 +280,13 @@
     border: none;
     border-radius: 0;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, .05);
-    margin: 2rem 5px 10px;
+    margin: 1rem 5px 10px;
 }
 
 #course .card-img-top {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    height: 240px;
 }
 
 #course .card .card-title {
@@ -297,7 +311,7 @@
 }
 
 #course .card .card-footer small {
-    color: #3bac47;
+    color: #03bb65;
     font-size: 18px;
     font-weight: 500;
 }
@@ -425,4 +439,15 @@
 .btn-white {
     background-color: #fff;
     border: 1px solid #cccccc;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #03bb65;
+    border-color: #03bb65;
+}
+
+.btn-success:hover {
+    background-color: #19c880;
+    border-color: #19c880;
 }
