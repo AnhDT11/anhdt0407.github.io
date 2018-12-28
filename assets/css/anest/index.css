@@ -148,8 +148,8 @@
 }
 
 .hamburger-menu .icon-bar:nth-child(1) {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
+    transform: rotate(-45deg);
+    transform-origin: 90% 10%;
 }
 
 .hamburger-menu.rotate .icon-bar:nth-child(2) {
@@ -165,8 +165,8 @@
 }
 
 .hamburger-menu .icon-bar:nth-child(3) {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
+    transform: rotate(45deg);
+    transform-origin: 90% 10%;
 }
 
 .site-navigation ul li a:hover,
