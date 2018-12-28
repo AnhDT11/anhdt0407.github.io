@@ -20,9 +20,14 @@ $(document).ready(function() {
     });
 
     // Main Navigation
-    $( '.hamburger-menu' ).on( 'click', function() {
+    $('.hamburger-menu').on('click', function() {
         $(this).toggleClass('open');
         $('.site-navigation').toggleClass('show');
+    });
+
+    // Add collapse
+    $('#btn-collapse').on('click', function() {
+        $(this).toggleClass('rotate');
     });
 
 });
