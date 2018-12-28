@@ -1,5 +1,5 @@
 /*!
- * fms js
+ * anest js
  */
 
 $(document).ready(function() {
@@ -19,9 +19,10 @@ $(document).ready(function() {
         return false;
     });
 
-    $('#btn-sidebar-toggle').click(function() {
-        $('.sidebar').toggleClass('sidebar-small');
-        $('#content-wrapper').toggleClass('resize-content');
+    // Main Navigation
+    $( '.hamburger-menu' ).on( 'click', function() {
+        $(this).toggleClass('open');
+        $('.site-navigation').toggleClass('show');
     });
 
 });
