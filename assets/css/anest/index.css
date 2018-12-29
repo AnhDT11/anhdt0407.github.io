@@ -261,10 +261,37 @@ body {
 }
 
 
+/* ----- Section title ----- */
+
+.top-title {
+    border-bottom: 4px solid #03bb65;
+    width: 65px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.top-title i {
+    font-size: 24px;
+    color: #03bb65;
+    margin-left: 3px;
+}
+
+.title {
+    color: #373737;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0 2px 30px;
+}
+
+.title .lg-f {
+    font-size: 35px;
+}
+
+
 /* ----- Section category ----- */
 
 #category {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 100px;
 }
 
@@ -282,33 +309,17 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+    #category {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
     #category .card {
-        margin: 20px 5px 0;
+        margin: 1rem 5px 0;
     }
 }
 
 
 /* ----- Section course ----- */
-
-.top-title {
-    border-bottom: 4px solid #03bb65;
-    width: 80px;
-    margin-left: 3px;
-    margin-bottom: 10px;
-}
-
-.top-title i {
-    font-size: 24px;
-    color: #03bb65;
-    margin-left: 3px;
-}
-
-.title {
-    color: #373737;
-    font-weight: 500;
-    font-size: 24px;
-    margin: 0 3px 20px;
-}
 
 #course {
     padding-top: 80px;
@@ -319,7 +330,7 @@ body {
     border: none;
     border-radius: 0;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, .05);
-    margin: 1rem 5px 10px;
+    margin: 0 5px 10px;
 }
 
 #course .card-img-top {
@@ -368,10 +379,30 @@ body {
     color: #ccc;
 }
 
+#course .btn-more {
+    padding-top: 3rem;
+}
+
 @media screen and (max-width: 998px) {
     .carousel-control-prev,
     .carousel-control-next {
         display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .title {
+        margin: 0 3px 10px;
+    }
+    #course {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #course .card {
+        margin: 1rem 5px 10px;
+    }
+    #course .btn-more {
+        padding-top: 1.5rem;
     }
 }
 
@@ -483,7 +514,7 @@ body {
 }
 
 #page-top::-webkit-scrollbar-thumb {
-    background-color: #d7dde4;
+    background-color: #e6e6e6;
     border-radius: 0;
 }
 
