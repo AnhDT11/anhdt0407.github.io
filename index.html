@@ -26,8 +26,8 @@
         function startTime() {
             var strcount
             var x = new Date()
-            var x1 = x.toUTCString(); // changing the display to UTC string
-            document.getElementById('clock').innerHTML = x1 + "/UTC";
+            var x1 = x.toLocaleString();
+            document.getElementById('clock').innerHTML = x1;
             tt = display_c();
         }
     </script>
@@ -68,10 +68,10 @@
                             <div class="header-bar-menu">
                                 <ul class="flex float-right">
                                     <li>
-                                        <a class="pr-3" href="javascript:void(0)" data-toggle="modal" data-target="#logoutModal">Register</a>
+                                        <a class="pr-3" href="javascript:void(0)" data-toggle="modal" data-target="#logoutModal">Đăng ký</a>
                                     </li>
                                     <li>
-                                        <a class="pl-3" href="javascript:void(0)" data-toggle="modal" data-target="#logoutModal">Login</a>
+                                        <a class="pl-3" href="javascript:void(0)" data-toggle="modal" data-target="#logoutModal">Đăng nhập</a>
                                     </li>
                                 </ul>
                             </div>
@@ -137,17 +137,17 @@
     <section id="category">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-4 col-md-4">
+                <div class="col-12 col-sm-12 col-md-4">
                     <div class="card">
                         <img src="assets/images/v4.jpg" class="card-img-top" alt="">
                     </div>
                 </div>
-                <div class="col-12 col-sm-4 col-md-4">
+                <div class="col-12 col-sm-12 col-md-4">
                     <div class="card">
                         <img src="assets/images/v4.jpg" class="card-img-top" alt="">
                     </div>
                 </div>
-                <div class="col-12 col-sm-4 col-md-4">
+                <div class="col-12 col-sm-12 col-md-4">
                     <div class="card">
                         <img src="assets/images/v4.jpg" class="card-img-top" alt="">
                     </div>
@@ -310,17 +310,17 @@
     <!-- Footer -->
     <div id="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-4 info">
-                    <h3>Anest</h3>
+            <div class="row f-top">
+                <div class="col-12 col-sm-12 col-md-4 info">
+                    <h6>ANEST</h6>
                     <p>Học viện lập trình</p>
                     <ul>
-                        <li><i class="far fa-envelope fa-fw mr-2"></i>anest.studio@gmail.com</li>
-                        <li><i class="fas fa-phone fa-fw mr-2"></i>(+84) 0973 876 107</li>
-                        <li><i class="fas fa-map-marker-alt fa-fw mr-2"></i>Thôn 9 - Tân Xã - Thạch Thất - Hà Nội</li>
+                        <li><i class="far fa-envelope fa-fw mr-1"></i>anest.studio@gmail.com</li>
+                        <li><i class="fas fa-phone fa-fw mr-1"></i>(+84) 0973 876 107</li>
+                        <li><i class="fas fa-map-marker-alt fa-fw mr-1"></i>Thôn 9 - Tân Xã - Thạch Thất - Hà Nội</li>
                     </ul>
                 </div>
-                <div class="col-4 course">
+                <div class="col-12 col-sm-12 col-md-4 course">
                     <h6>KHÓA HỌC</h6>
                     <p>Các khóa học lập trình sẵn sàng</p>
                     <ul>
@@ -328,14 +328,42 @@
                         <li>Java Web (JSP/Servlet)</li>
                         <li>Javascript</li>
                         <li>HTML/CSS</li>
+                        <li>Angular</li>
                     </ul>
                 </div>
-                <div class="col-4">
-
+                <div class="col-12 col-sm-12 col-md-4 social">
+                    <h6>FOLLOW US</h6>
+                    <p>Cập nhật những tin tức - khuyễn mãi nhanh nhất</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="btn btn-md btn-success mt-4">Đăng ký học</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+    <div id="signature">
+        <div class="container">
+            <div class="row f-bot">
+                <div class="col-12 col-sm-12 col-md-6">
+                    <i class="far fa-clock fa-fw mr-1"></i><span id=clock></span>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 copyright">
+                    <span>Copyright © 2019 ANEST - Học viện lập trình</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
