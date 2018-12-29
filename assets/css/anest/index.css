@@ -280,7 +280,7 @@ body {
 .title {
     color: #373737;
     font-weight: 500;
-    font-size: 23px;
+    font-size: 26px;
     margin: 0 2px 30px;
 }
 
@@ -305,7 +305,7 @@ body {
 #category .card-img-top {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    height: 200px;
+    height: 180px;
 }
 
 #category .card {
@@ -338,7 +338,7 @@ body {
 }
 
 #description .box i {
-    margin: 25px 0;
+    margin: 25px 0 20px;
     color: #03bb65;
 }
 
@@ -364,7 +364,7 @@ body {
 #course .card-img-top {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    height: 240px;
+    height: 220px;
 }
 
 #course .card .card-title {
@@ -384,7 +384,7 @@ body {
 #course .card .card-footer {
     padding: .55rem 1.25rem;
     background-color: transparent;
-    border-top: 1px solid rgba(0, 0, 0, .125);
+    border-top: 1px solid rgb(239, 239, 239);
     text-align: right;
 }
 
