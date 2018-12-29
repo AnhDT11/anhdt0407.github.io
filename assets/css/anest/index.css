@@ -1,3 +1,13 @@
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../../fonts/SourceSansPro.otf);
+}
+
+body {
+    font-size: .915rem;
+    font-family: SourceSansPro;
+}
+
 .bg-color {
     background: #f7f7f7;
 }
@@ -252,7 +262,7 @@
 /* ----- Section category ----- */
 
 #category {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 100px;
 }
 
@@ -293,7 +303,7 @@
 }
 
 #course {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 100px;
 }
 
@@ -369,6 +379,33 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     opacity: 1;
+}
+
+
+/* ----- Footer ----- */
+
+#footer {
+    padding: 60px 0;
+    background-color: #232323;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+#footer .info ul {
+    padding: 0;
+}
+
+#footer .info ul li {
+    list-style: none;
+    padding: 2px 0;
+}
+
+#footer .course ul {
+    padding-left: 18px;
+}
+
+#footer .course ul li {
+    padding: 2px 0;
 }
 
 

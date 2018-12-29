@@ -16,9 +16,24 @@
     <link rel="stylesheet" href="assets/css/anest/index.css">
 
     <title>Anest | Học viện lập trình</title>
+
+    <script type="text/javascript">
+        function display_c() {
+            var refresh = 1000; // refresh rate in milli seconds
+            mytime = setTimeout('startTime()', refresh)
+        }
+
+        function startTime() {
+            var strcount
+            var x = new Date()
+            var x1 = x.toUTCString(); // changing the display to UTC string
+            document.getElementById('clock').innerHTML = x1 + "/UTC";
+            tt = display_c();
+        }
+    </script>
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="startTime()">
     <!-- Start hero -->
     <div class="hero-content">
         <header class="site-header">
@@ -29,7 +44,7 @@
                             <ul class="float-left">
                                 <li>
                                     <a href="#" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
-                                        <i class="fas fa-phone fa-fw"></i> 0973 876 107
+                                        <i class="fas fa-phone fa-fw fa-sm"></i> 0973 876 107
                                     </a>
                                 </li>
                                 <li>
@@ -292,6 +307,35 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 info">
+                    <h3>Anest</h3>
+                    <p>Học viện lập trình</p>
+                    <ul>
+                        <li><i class="far fa-envelope fa-fw mr-2"></i>anest.studio@gmail.com</li>
+                        <li><i class="fas fa-phone fa-fw mr-2"></i>(+84) 0973 876 107</li>
+                        <li><i class="fas fa-map-marker-alt fa-fw mr-2"></i>Thôn 9 - Tân Xã - Thạch Thất - Hà Nội</li>
+                    </ul>
+                </div>
+                <div class="col-4 course">
+                    <h6>KHÓA HỌC</h6>
+                    <p>Các khóa học lập trình sẵn sàng</p>
+                    <ul>
+                        <li>Java Core</li>
+                        <li>Java Web (JSP/Servlet)</li>
+                        <li>Javascript</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="col-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
