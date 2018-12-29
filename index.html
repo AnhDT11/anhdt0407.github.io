@@ -15,7 +15,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/anest/index.css">
 
-    <title>Index</title>
+    <title>Anest | Học viện lập trình</title>
 </head>
 
 <body id="page-top">
@@ -77,7 +77,7 @@
                             <nav class="site-navigation flex justify-content-end">
                                 <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                     <li><a href="#">Trang chủ</a></li>
-                                    <li><a href="#">Khóa học</a></li>
+                                    <li><a href="#course">Khóa học</a></li>
                                     <li><a href="#">Blog</a></li>
                                     <li><a href="#">Tuyển dụng</a></li>
                                     <li><a href="#">Liên hệ</a></li>
@@ -109,7 +109,7 @@
                             </div>
 
                             <footer class="entry-footer read-more">
-                                <a href="#">read more</a>
+                                <a href="#">Đăng ký</a>
                             </footer>
                         </div>
                     </div>
@@ -118,6 +118,28 @@
         </div>
     </div>
     <!-- End hero -->
+
+    <section id="category">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-4 col-md-4">
+                    <div class="card">
+                        <img src="assets/images/v4.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4">
+                    <div class="card">
+                        <img src="assets/images/v4.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4">
+                    <div class="card">
+                        <img src="assets/images/v4.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="course" class="bg-color">
         <div class="container">
@@ -129,7 +151,7 @@
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-4">
                                 <div class="card">
-                                    <img src="assets/images/v.jpg" class="card-img-top" alt="...">
+                                    <img src="assets/images/v4.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Java Core Basic</h5>
                                         <p class="card-time">Thời gian: 15 buổi</p>
@@ -189,7 +211,7 @@
                             </div>
                             <div class="col-12 col-sm-12 col-md-4">
                                 <div class="card">
-                                    <img src="assets/images/v2.jpg" class="card-img-top" alt="...">
+                                    <img src="assets/images/v4.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Java Core Advanced 3</h5>
                                         <p class="card-time">Thời gian: 15 buổi</p>
@@ -226,6 +248,46 @@
                     <i class="fas fa-angle-double-right fa-2x"></i>
                     <span class="sr-only">Next</span>
                 </a>
+            </div>
+            <div class="text-center pt-5">
+                <a href="" class="btn btn-lg btn-success">Xem thêm</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="next" style="height: 200px;">
+
+    </section>
+
+    <section id="location">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <div id="gmap"></div>
+
+                    <script>
+                        function myMap() {
+                            var myCenter = new google.maps.LatLng(21.018840, 105.549235);
+                            var mapCanvas = document.getElementById("gmap");
+                            var mapOptions = {
+                                center: myCenter,
+                                zoom: 16
+                            };
+                            var map = new google.maps.Map(mapCanvas, mapOptions);
+                            var marker = new google.maps.Marker({
+                                position: myCenter
+                            });
+                            marker.setMap(map);
+
+                            var infowindow = new google.maps.InfoWindow({
+                                content: "Anest"
+                            });
+                            infowindow.open(map, marker);
+                        }
+                    </script>
+
+                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2LlIj3sk2akFpnpNcXzX9_NS08Xda1sE&callback=myMap"></script>
+                </div>
             </div>
         </div>
     </section>
