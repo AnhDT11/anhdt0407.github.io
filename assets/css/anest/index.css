@@ -336,7 +336,7 @@ body {
     margin: 0 5px 0;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     #category {
         padding-top: 40px;
         padding-bottom: 50px;
@@ -399,6 +399,15 @@ body {
     font-size: 18px;
     font-weight: 500;
     float: right;
+}
+
+@media screen and (max-width: 768px) {
+    #course-ready .media {
+        margin-top: 20px;
+    }
+    #course-ready .media img {
+        display: none;
+    }
 }
 
 
@@ -492,7 +501,7 @@ body {
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .title {
         margin: 0 3px 10px;
     }
