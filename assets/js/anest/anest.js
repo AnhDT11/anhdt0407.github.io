@@ -31,7 +31,7 @@ $(document).ready(function() {
     });
 
     // Smooth Scrolling
-    $(".nav-bar a").on('click', function(event) {
+    $(".nav-bar a, .entry-footer a").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
@@ -46,4 +46,14 @@ $(document).ready(function() {
         }
     });
 
+});
+
+$(document).mouseup(function(e) {
+    var container = $('.site-navigation');
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.removeClass('show');
+        $('#btn-collapse').addClass('rotate');
+    }
 });
