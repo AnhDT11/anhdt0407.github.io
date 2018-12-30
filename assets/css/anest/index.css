@@ -273,13 +273,13 @@ body {
 .top-title i {
     font-size: 24px;
     color: #03bb65;
-    margin-left: 3px;
+    margin-left: 5px;
     margin-bottom: 5px;
 }
 
 .title {
     color: #373737;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 26px;
     margin: 0 2px 30px;
 }
@@ -292,6 +292,27 @@ body {
     .title {
         font-size: 21px;
     }
+}
+
+
+/* ----- Section description ----- */
+
+#description {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#description .box {
+    padding: 0 5px;
+}
+
+#description .box i {
+    margin: 25px 0 20px;
+    color: #03bb65;
+}
+
+#description .box h4 {
+    margin-bottom: .75rem;
 }
 
 
@@ -326,24 +347,58 @@ body {
 }
 
 
-/* ----- Section description ----- */
+/* ----- Section course-ready ----- */
 
-#description {
+#course-ready {
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
-#description .box {
-    padding: 0 5px;
+#course-ready .media img {
+    width: calc(50% - 30px);
+    height: 220px;
 }
 
-#description .box i {
-    margin: 25px 0 20px;
+#course-ready .media .media-body {
+    border: 1px solid #e2e2e2;
+    height: 220px;
+}
+
+#course-ready .media .media-body .content {
+    padding: 12px 25px;
+    height: 180px;
+}
+
+#course-ready .media .media-body .content h5 {
+    color: #373737;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#course-ready .media .media-body .content p {
+    margin-bottom: 4px;
+}
+
+#course-ready .media .media-body .footer {
+    padding: 6px 25px;
+    height: 40px;
+    border-top: 1px solid #e2e2e2;
+}
+
+#course-ready .media .media-body .footer span {
+    margin-top: 2px;
+    display: inline-block;
+}
+
+#course-ready .media .media-body .footer span i {
+    color: #ffb71d;
+}
+
+#course-ready .media .media-body .footer small {
     color: #03bb65;
-}
-
-#description .box h4 {
-    margin-bottom: .75rem;
+    font-size: 18px;
+    font-weight: 500;
+    float: right;
 }
 
 
