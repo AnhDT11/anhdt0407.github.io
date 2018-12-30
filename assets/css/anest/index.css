@@ -14,7 +14,7 @@ body {
 }
 
 .hero-content {
-    background: url(../../images/hero-bg.jpg) no-repeat center;
+    background: url(../../images/cover/hero-bg.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -467,6 +467,7 @@ body {
 #footer h6 {
     margin-bottom: 10px;
     margin-top: 20px;
+    font-size: 1.15rem;
 }
 
 #footer .info ul,
