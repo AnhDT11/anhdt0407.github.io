@@ -361,6 +361,10 @@ body {
     margin: 0 5px 10px;
 }
 
+#course .card .card-body {
+    padding: 1rem;
+}
+
 #course .card-img-top {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -371,27 +375,42 @@ body {
     color: #373737;
     font-size: 22px;
     font-weight: 500;
+    margin-bottom: .35rem;
 }
 
 #course .card .card-time {
     font-size: 14px;
+    margin-bottom: .75rem;
 }
 
 #course .card .card-text {
     font-size: 15px;
+    height: 145px;
+    vertical-align: middle;
+    display: table-cell;
+    padding-bottom: 10px;
 }
 
 #course .card .card-footer {
-    padding: .55rem 1.25rem;
+    padding: .55rem 1rem;
     background-color: transparent;
     border-top: 1px solid rgb(239, 239, 239);
-    text-align: right;
+}
+
+#course .card .card-footer span {
+    margin-top: 2px;
+    display: inline-block;
+}
+
+#course .card .card-footer span i {
+    color: #ffb71d;
 }
 
 #course .card .card-footer small {
     color: #03bb65;
     font-size: 18px;
     font-weight: 500;
+    float: right;
 }
 
 .carousel-control-prev {
@@ -628,11 +647,11 @@ body {
 
 .btn-md {
     font-size: .95rem;
-    padding: .3rem 1.2rem .35rem;
+    padding: .3rem 1.2rem;
 }
 
 .btn-lg {
-    font-size: .975rem;
+    font-size: 1rem;
     padding: .4rem 1.5rem .5rem;
 }
 
