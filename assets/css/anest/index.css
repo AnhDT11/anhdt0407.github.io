@@ -88,7 +88,6 @@ body {
 }
 
 .site-title {
-    padding: 6px 0;
     margin: 0;
     font-size: 36px;
     font-weight: 500;
@@ -96,13 +95,8 @@ body {
     text-align: left !important;
 }
 
-.site-title a {
-    color: #fff !important;
-    text-decoration: none;
-}
-
-.site-title a span {
-    color: #03bb65;
+.site-title a img {
+    height: 48px;
 }
 
 .site-navigation.show ul {
@@ -351,11 +345,11 @@ body {
 
 #course-ready {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 
 #course-ready .media img {
-    width: calc(50% - 30px);
+    width: calc(50% - 50px);
     height: 220px;
 }
 
@@ -402,6 +396,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    #course-ready {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
     #course-ready .media {
         margin-top: 20px;
     }
@@ -545,6 +543,11 @@ body {
 
 #footer .f-top {
     padding: 60px 0 40px;
+}
+
+#footer .f-top img {
+    height: 45px;
+    margin-bottom: 7px;
 }
 
 #footer h6 {
