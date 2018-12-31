@@ -208,7 +208,7 @@ body {
 
 @media screen and (max-width: 480px) {
     .hero-content-wrap {
-        height: 800px;
+        height: 650px;
         padding-top: 100px;
     }
 }
@@ -254,6 +254,12 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content-wrap h1 {
+        font-size: 40px;
+    }
 }
 
 
@@ -348,6 +354,13 @@ body {
 
 #description .box h4 {
     margin-bottom: .75rem;
+}
+
+@media screen and (max-width: 768px) {
+    #description {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
 }
 
 
@@ -450,6 +463,9 @@ body {
     }
     #course-ready .media img {
         display: none;
+    }
+    #course-ready .btn-more {
+        padding-top: 2rem;
     }
 }
 
@@ -704,6 +720,9 @@ body {
 @media screen and (max-width: 576px) {
     #signature .f-bot .copyright {
         text-align: left;
+    }
+    #footer .f-top {
+        padding: 35px 0 10px;
     }
 }
 
