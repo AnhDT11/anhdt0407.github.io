@@ -395,6 +395,10 @@ body {
     float: right;
 }
 
+#course-ready .btn-more {
+    padding-top: 3rem;
+}
+
 @media screen and (max-width: 768px) {
     #course-ready {
         padding-top: 40px;
@@ -739,7 +743,13 @@ body {
 @media (min-width: 576px) {
     .modal-dialog {
         max-width: 500px;
-        margin: 10rem auto;
+        margin: 10rem .75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin: 10rem .75rem;
     }
 }
 
