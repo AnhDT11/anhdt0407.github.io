@@ -14,8 +14,10 @@ body {
 }
 
 .hero-content {
-    background: url(../../images/cover/hero-bg.jpg) no-repeat center;
-    background-size: cover;
+    /* background: url('../../images/cover/hero-bg.jpg'); */
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
 }
 
 .site-header {
@@ -201,7 +203,7 @@ body {
 }
 
 .hero-content-wrap {
-    height: 100vh;
+    height: calc(100vh - 50px);
 }
 
 @media screen and (max-width: 480px) {
@@ -252,6 +254,45 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
+}
+
+
+/* ----- Section sub nav ----- */
+
+#sub-nav .bg-dark {
+    background-color: #232323 !important;
+}
+
+#sub-nav img {
+    height: 34px;
+    display: none;
+}
+
+#sub-nav .nav-link {
+    padding: .375rem 1rem;
+}
+
+#sub-nav .show-img {
+    display: block;
+}
+
+#sub-nav .navbar-dark .navbar-toggler {
+    border-color: transparent;
+}
+
+#sub-nav .navbar-dark .navbar-toggler:focus,
+#sub-nav .navbar-dark .navbar-toggler:target {
+    outline: none;
+}
+
+#sub-nav .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sub-nav .ml {
+    margin-left: auto;
+    margin-right: inherit;
 }
 
 
@@ -523,14 +564,18 @@ body {
 }
 
 
-/* ----- Section question ----- */
+/* ----- Section faq ----- */
 
-#question {
+#faq {
     padding-top: 80px;
     padding-bottom: 100px
 }
 
-#question a {
+#faq .accordion {
+    margin: 0 5px;
+}
+
+#faq a {
     padding: 8px 15px;
     border: 1px solid rgba(0, 0, 0, .125);
     width: 100%;
@@ -539,25 +584,25 @@ body {
     color: #03bb65;
 }
 
-#question a:hover {
+#faq a:hover {
     text-decoration: none;
 }
 
-#question .collapse-panel {
+#faq .collapse-panel {
     margin-bottom: 7px;
 }
 
-#question .card {
+#faq .card {
     border-radius: 0;
 }
 
-#question .card-body {
+#faq .card-body {
     padding: 15px;
     border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
 
 @media screen and (max-width: 768px) {
-    #question {
+    #faq {
         padding-top: 40px;
         padding-bottom: 50px
     }

@@ -34,9 +34,9 @@
     </script>
 </head>
 
-<body id="page-top" onload="startTime()">
+<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50" onload="startTime()">
     <!-- Start hero -->
-    <div class="hero-content">
+    <div class="hero-content" style="background: url(assets/images/cover/bg.jpg);">
         <header class="site-header">
             <div class="top-header-bar">
                 <div class="container">
@@ -138,6 +138,39 @@
         </div>
     </div>
     <!-- End hero -->
+
+    <section id="sub-nav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a href="index.html" rel="home">
+                    <img src="assets/images/cover/logo.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#description">Về ANEST <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#course-ready">Khóa học đang tuyển sinh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#course">Tất cả khóa học</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">Câu hỏi thường gặp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#location">Bản đồ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
 
     <section id="description">
         <div class="container">
@@ -424,17 +457,17 @@
         </div>
     </section>
 
-    <section id="question">
+    <section id="faq">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12">
                     <div class="top-title"><i class="fas fa-question"></i></div>
-                    <h3 class="title"><span class="lg-f">H</span>ỎI - ĐÁP</h3>
+                    <h3 class="title"><span class="lg-f">C</span>ÂU HỎI THƯỜNG GẶP</h3>
                     <div class="accordion" id="accordion">
                         <div class="collapse-panel">
                             <a data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
-                                    Link with href
-                                </a>
+                                Link with href
+                            </a>
                             <div class="collapse" id="collapse1" data-parent="#accordion">
                                 <div class="card card-body">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
@@ -452,20 +485,20 @@
                             </div>
                         </div>
                         <div class="collapse-panel">
-                            <a data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
+                            <a data-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse2">
                                 Link with href
                             </a>
-                            <div class="collapse" id="collapse2" data-parent="#accordion">
+                            <div class="collapse" id="collapse3" data-parent="#accordion">
                                 <div class="card card-body">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                                 </div>
                             </div>
                         </div>
                         <div class="collapse-panel">
-                            <a data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
+                            <a data-toggle="collapse" href="#collapse4" role="button" aria-expanded="false" aria-controls="collapse2">
                                 Link with href
                             </a>
-                            <div class="collapse" id="collapse2" data-parent="#accordion">
+                            <div class="collapse" id="collapse4" data-parent="#accordion">
                                 <div class="card card-body">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                                 </div>
