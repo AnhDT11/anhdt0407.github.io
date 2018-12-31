@@ -222,7 +222,7 @@ body {
 }
 
 .hero-content-wrap h1 {
-    margin-top: 12px;
+    margin-top: 15px;
     font-size: 60px;
     font-weight: 500;
     text-transform: uppercase;
@@ -232,10 +232,11 @@ body {
 .hero-content-wrap p {
     margin-top: 8px;
     color: #fff;
+    line-height: 25px;
 }
 
 .hero-content-wrap .read-more {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 998px) {
@@ -246,9 +247,9 @@ body {
 
 .hero-content-wrap .read-more a {
     display: inline-block;
-    padding: 12px 40px;
+    padding: 10px 40px;
     border: 2px solid #03bb65;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
@@ -780,6 +781,34 @@ body {
 }
 
 
+/* ----- About modal ----- */
+
+#aboutModal .modal-header {
+    border-bottom: 1px solid #dadada;
+    padding: .75rem 1rem;
+}
+
+#aboutModal .modal-header .close {
+    padding: .75rem .8rem;
+}
+
+#aboutModal .modal-header h4 {
+    margin-bottom: 0;
+}
+
+#aboutModal .modal-body p {
+    line-height: 25px;
+}
+
+#aboutModal .modal-body p i {
+    font-size: 12px;
+}
+
+#aboutModal .modal-body p span {
+    color: #03bb65;
+}
+
+
 /* ----- Bootstrap component custom css ----- */
 
 .modal-header {
@@ -809,15 +838,8 @@ body {
 }
 
 @media (min-width: 576px) {
-    .modal-dialog {
+    #logoutModal .modal-dialog {
         max-width: 500px;
-        margin: 10rem .75rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .modal-dialog {
-        margin: 10rem .75rem;
     }
 }
 
@@ -828,7 +850,7 @@ body {
 
 .btn-sm {
     font-size: .85rem;
-    padding: .275rem .9rem .375rem;
+    padding: .275rem .9rem;
 }
 
 .btn-md {
