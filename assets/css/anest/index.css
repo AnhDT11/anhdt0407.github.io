@@ -292,7 +292,7 @@ body {
 }
 
 #sub-nav .navbar-toggler {
-    padding: 0.063rem .75rem;
+    padding: 0.063rem 0;
 }
 
 #sub-nav .navbar-nav {
