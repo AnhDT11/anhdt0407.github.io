@@ -808,6 +808,13 @@ body {
     color: #03bb65;
 }
 
+@media screen and (max-width: 576px) {
+    #aboutModal .modal-body {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
+
 
 /* ----- Bootstrap component custom css ----- */
 
