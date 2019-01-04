@@ -220,42 +220,6 @@
 }
 
 
-/* ----- Section contact ----- */
-
-#contact {
-    padding-top: 80px;
-    padding-bottom: 100px
-}
-
-#contact form {
-    margin: 0 5px;
-}
-
-#contact .input-group-text {
-    padding: .375rem .6rem;
-}
-
-#contact .form-control {
-    border-radius: 0;
-}
-
-#contact .form-control:focus {
-    border-color: #03bb65;
-    box-shadow: 0 0 0 0.2rem rgba(3, 187, 101, 0.35);
-}
-
-#contact .input-group-text {
-    border-radius: 0;
-}
-
-@media screen and (max-width: 768px) {
-    #contact {
-        padding-top: 40px;
-        padding-bottom: 50px
-    }
-}
-
-
 /* ----- Section location ----- */
 
 #gmap {
