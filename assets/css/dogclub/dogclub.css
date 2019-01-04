@@ -1,0 +1,268 @@
+/*----- Hero content -----*/
+
+.hero-content-overlay {
+    background: rgba(0, 0, 0, .5);
+}
+
+.hero-content-wrap {
+    height: 80vh;
+}
+
+@media screen and (max-width: 576px) {
+    .hero-content-wrap {
+        height: calc(100vh - 50px);
+        padding-top: 115px;
+    }
+}
+
+.hero-content-wrap h4 {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #03bb65;
+    letter-spacing: 0.1em;
+}
+
+.hero-content-wrap h1 {
+    margin-top: 15px;
+    font-size: 60px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.hero-content-wrap p {
+    margin-top: 8px;
+    color: #fff;
+    line-height: 25px;
+}
+
+.hero-content-wrap .read-more {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 998px) {
+    .hero-content-wrap .read-more {
+        margin-top: 10px;
+    }
+}
+
+.hero-content-wrap .read-more a {
+    display: inline-block;
+    padding: 10px 40px;
+    border: 2px solid #03bb65;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content-wrap h1 {
+        font-size: 40px;
+    }
+}
+
+
+/* ----- Section description ----- */
+
+#about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#about .box {
+    padding: 0 5px;
+}
+
+#about .box i {
+    margin: 25px 0 20px;
+    color: #03bb65;
+}
+
+#about .box h4 {
+    margin-bottom: .75rem;
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+}
+
+
+/* ----- Section course-ready ----- */
+
+#dog {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#dog .media {
+    margin: 0 5px 1.5rem;
+}
+
+#dog .media img {
+    width: calc(50% - 50px);
+    height: 220px;
+}
+
+#dog .media .media-body {
+    border: 1px solid #e2e2e2;
+    height: 220px;
+}
+
+#dog .media .media-body .content {
+    padding: 12px 25px;
+    height: 180px;
+}
+
+#dog .media .media-body .content h5 {
+    color: #373737;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#dog .media .media-body .content p {
+    margin-bottom: 4px;
+}
+
+#dog .media .media-body .footer {
+    padding: 6px 25px;
+    height: 40px;
+    border-top: 1px solid #e2e2e2;
+}
+
+#dog .media .media-body .footer span {
+    margin-top: 2px;
+    display: inline-block;
+}
+
+#dog .media .media-body .footer span i {
+    color: #ffb71d;
+}
+
+#dog .media .media-body .footer small {
+    color: #03bb65;
+    font-size: 18px;
+    font-weight: 500;
+    float: right;
+}
+
+#dog .btn-more {
+    /* padding-top: 2rem; */
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #dog {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #dog .media {
+        margin: 1.5rem 5px 0;
+    }
+    #dog .media img {
+        display: none;
+    }
+    #dog .btn-more {
+        display: block;
+        padding-top: 2rem;
+    }
+}
+
+
+/* ----- Section faq ----- */
+
+#faq {
+    padding-top: 50px;
+    padding-bottom: 60px
+}
+
+#faq .accordion {
+    margin: 0 5px;
+}
+
+#faq a {
+    padding: 8px 15px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    color: #03bb65;
+}
+
+#faq a:hover {
+    text-decoration: none;
+}
+
+#faq .collapse-panel {
+    margin-bottom: 7px;
+}
+
+#faq .card {
+    border-radius: 0;
+}
+
+#faq .card-body {
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+@media screen and (max-width: 768px) {
+    #faq {
+        padding-top: 40px;
+        padding-bottom: 50px
+    }
+}
+
+
+/* ----- Section contact ----- */
+
+#contact {
+    padding-top: 80px;
+    padding-bottom: 100px
+}
+
+#contact form {
+    margin: 0 5px;
+}
+
+#contact .input-group-text {
+    padding: .375rem .6rem;
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    border-color: #03bb65;
+    box-shadow: 0 0 0 0.2rem rgba(3, 187, 101, 0.35);
+}
+
+#contact .input-group-text {
+    border-radius: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #contact {
+        padding-top: 40px;
+        padding-bottom: 50px
+    }
+}
+
+
+/* ----- Section location ----- */
+
+#gmap {
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 1;
+}

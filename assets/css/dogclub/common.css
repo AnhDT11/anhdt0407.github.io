@@ -1,0 +1,464 @@
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../../fonts/SourceSansPro.otf);
+}
+
+body {
+    font-size: 15px;
+    font-family: SourceSansPro;
+    letter-spacing: .015rem;
+}
+
+.bg-color {
+    background: #f7f7f7;
+}
+
+.hero-content {
+    /* background: url('../../images/cover/hero-bg.jpg'); */
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+}
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+}
+
+
+/*----- Top bar -----*/
+
+.top-header-bar {
+    background: transparent;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 992px) {
+    .top-left {
+        display: none;
+    }
+    .top-right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.top-header-bar .container ul .icon-size {
+    width: 39px;
+}
+
+.top-header-bar .container ul {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.top-header-bar .container ul li {
+    float: right;
+    list-style: none;
+}
+
+.top-header-bar .container ul li a {
+    color: #fff;
+    padding: 8px 15px;
+    display: block;
+    font-size: 14px;
+}
+
+.top-header-bar .container ul.float-left li a {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.top-header-bar .container ul li a:hover {
+    color: #03bb65;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex !important;
+}
+
+
+/*----- Nav bar -----*/
+
+.nav-bar {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.site-title {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left !important;
+}
+
+.site-title a img {
+    height: 48px;
+}
+
+.site-navigation.show ul {
+    left: 0;
+}
+
+.site-navigation ul {
+    margin: 0;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 250px;
+    height: 100%;
+    overflow-x: hidden;
+    padding: 30px 15px;
+    background: rgba(0, 0, 0, .95);
+    transition: all 0.35s;
+}
+
+@media screen and (min-width: 992px) {
+    .site-navigation ul {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        overflow: auto;
+        background: transparent;
+    }
+}
+
+.hamburger-menu {
+    position: relative;
+    margin: 0 auto;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.hamburger-menu .icon-bar {
+    display: block;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #e6e6e6;
+    width: 35px;
+    transition: all 0.25s ease;
+}
+
+.hamburger-menu .icon-bar+.icon-bar {
+    margin-top: 8px;
+}
+
+.hamburger-menu .icon-bar:nth-child(1) {
+    transform: rotate(-45deg);
+    transform-origin: 90% 10%;
+}
+
+.hamburger-menu .icon-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.rotate .icon-bar:nth-child(1) {
+    transform: none;
+}
+
+.hamburger-menu.rotate .icon-bar:nth-child(2) {
+    opacity: 1;
+}
+
+.hamburger-menu.rotate .icon-bar:nth-child(3) {
+    transform: none;
+}
+
+.hamburger-menu .icon-bar:nth-child(3) {
+    transform: rotate(45deg);
+    transform-origin: 90% 10%;
+}
+
+.site-navigation ul li a:hover,
+.site-navigation ul li.active a {
+    color: #03bb65;
+}
+
+.site-navigation ul li a {
+    font-size: 15px;
+    display: block;
+    padding: 13px 15px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+/* ----- Section title ----- */
+
+.title {
+    color: #373737;
+    font-weight: 800;
+    font-size: 26px;
+    margin: 0 2px 30px;
+}
+
+.title a {
+    float: right;
+    margin-right: 3px;
+}
+
+.title .lg-f {
+    font-size: 35px;
+}
+
+@media screen and (max-width: 768px) {
+    .title a {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .title {
+        font-size: 21px;
+    }
+}
+
+
+/* ----- Footer ----- */
+
+#footer {
+    background-color: #232323;
+    color: #bdbdbd;
+    font-size: 15px;
+}
+
+#footer .f-top {
+    padding: 40px 0 40px;
+}
+
+#footer .f-top img {
+    height: 45px;
+    margin-bottom: 7px;
+}
+
+#footer h6 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 1.15rem;
+}
+
+#footer .info ul,
+#footer .social ul {
+    padding: 0;
+}
+
+#footer .info ul li,
+#footer .social ul li {
+    list-style: none;
+    padding: 2px 0;
+}
+
+#footer .course ul {
+    padding-left: 18px;
+}
+
+#footer .course ul li {
+    padding: 2px 0;
+}
+
+#footer .social ul li a {
+    color: #bdbdbd;
+    margin-right: 20px;
+}
+
+#footer .social ul li a i {
+    font-size: 40px;
+}
+
+#footer .social ul li a.btn {
+    color: #fff;
+}
+
+#footer .social ul li a.btn i {
+    font-size: 16px;
+}
+
+#footer .social ul li a:hover i {
+    color: #03bb65;
+}
+
+#signature {
+    background-color: #161617;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 576px) {
+    #footer .f-top {
+        padding: 35px 0 10px;
+    }
+}
+
+
+/* ----- Scroll bar----- */
+
+#page-top::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 8px #fff;
+    background-color: #fff;
+    border-radius: 0;
+}
+
+#page-top::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fff;
+}
+
+#page-top::-webkit-scrollbar-thumb {
+    background-color: #d1d1d1;
+    border-radius: 0;
+}
+
+
+/* ----- Button scroll to top ----- */
+
+.scroll-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.35);
+    line-height: 38px;
+    font-size: 22px;
+}
+
+.scroll-to-top:focus,
+.scroll-to-top:hover {
+    color: white;
+}
+
+.scroll-to-top:hover {
+    background: #343a40;
+}
+
+.scroll-to-top i {
+    font-weight: 800;
+}
+
+
+/* ----- Bootstrap component custom css ----- */
+
+
+/* ----- Modal ----- */
+
+.modal-header {
+    border-bottom: 1px solid transparent;
+}
+
+.modal-body {
+    padding: 1rem 1rem 0;
+}
+
+.modal-content {
+    border-radius: .2rem;
+}
+
+.modal-footer {
+    border-top: 1px solid transparent;
+}
+
+.modal-header .close {
+    padding: .5rem .8rem;
+}
+
+.modal-body h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #000;
+}
+
+@media (min-width: 576px) {
+    #logoutModal .modal-dialog {
+        max-width: 500px;
+    }
+}
+
+
+/* ----- About modal ----- */
+
+#aboutModal .modal-header {
+    border-bottom: 1px solid #dadada;
+    padding: .75rem 1rem;
+}
+
+#aboutModal .modal-header .close {
+    padding: .75rem .8rem;
+}
+
+#aboutModal .modal-header h4 {
+    margin-bottom: 0;
+}
+
+#aboutModal .modal-body p {
+    line-height: 25px;
+}
+
+#aboutModal .modal-body p i {
+    font-size: 12px;
+}
+
+#aboutModal .modal-body p span {
+    color: #03bb65;
+}
+
+@media screen and (max-width: 576px) {
+    #aboutModal .modal-body {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
+
+
+/* ----- Button ----- */
+
+.btn {
+    line-height: 1.5;
+    border-radius: 2px;
+}
+
+.btn-sm {
+    font-size: .85rem;
+    padding: .275rem .9rem;
+}
+
+.btn-md {
+    font-size: .95rem;
+    padding: .3rem 1.2rem;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: .4rem 1.5rem .5rem;
+}
+
+.btn-white {
+    background-color: #fff;
+    border: 1px solid #cccccc;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #03bb65;
+    border-color: #03bb65;
+}
+
+.btn-success:hover {
+    background-color: #19c880;
+    border-color: #19c880;
+}
