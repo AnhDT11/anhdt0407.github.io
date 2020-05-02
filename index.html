@@ -89,25 +89,20 @@
   <script src="assets/js/boarding-house/boarding-house.js"></script>
   <script>
     function register() {
-      var http = new XMLHttpRequest();
-      var url = 'https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwM3OfHAE3bpxiXk0BMgUk8SF9mSZ0iIlRVlHfEgCuIyDQuPx9s/exec';
+      var url = 'https://script.google.com/macros/s/AKfycbwM3OfHAE3bpxiXk0BMgUk8SF9mSZ0iIlRVlHfEgCuIyDQuPx9s/exec';
 
-      var name = document.getElementById('name').value;
-      var k = document.getElementById('k').value;
-      var mobile = document.getElementById('mobile').value;
+      var data = {
+        name: document.getElementById('name').value,
+        k: document.getElementById('k').value,
+        mobile: document.getElementById('mobile').value
+      };
 
-      var params = 'name=' + name + '&k=' + k + '&mobile=' + mobile;
-      http.open('POST', url, true);
-
-      //Send the proper header information along with the request
-      http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-      http.onreadystatechange = function() { //Call a function when the state changes.
-        if (http.readyState == 4 && http.status == 200) {
-          alert(http.responseText);
-        }
-      }
-      http.send(params);
+      $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: data
+      });
     }
   </script>
 </body>
