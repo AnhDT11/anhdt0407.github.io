@@ -1,0 +1,351 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-size: .95rem;
+  letter-spacing: .015rem;
+  color: #bdbdbd;
+  line-height: 1.55;
+  font-weight: 400;
+  height: 100vh;
+  background-color: #1e1e1e;
+}
+
+
+/*
+ * ---------- Common ----------
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff !important;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.color-gradient {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #ff9916), color-stop(1, #fff707));
+  color: transparent !important;
+  -webkit-background-clip: text;
+}
+
+
+/*
+ * ---------- Intro ----------
+ */
+
+#intro {
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: absolute;
+}
+
+#intro .middle {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1000;
+}
+
+#intro .middle .form-panel {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 320px;
+  max-width: 380px;
+  width: calc(100% - 40px);
+  padding: 1.5rem 2.5rem 1rem;
+  margin-bottom: 5rem;
+  border-radius: .5rem;
+  background-color: #333;
+}
+
+@media (max-width: 575.98px) {
+  #intro .middle .form-panel {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+}
+
+.logo {
+  margin: 0 0 .75rem;
+}
+
+.logo a {
+  font-size: 2.75rem;
+  color: #fff;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.logo a:hover {
+  text-decoration: none;
+}
+
+.col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.notification {
+  color: #ffaf14;
+  font-size: .9rem;
+  margin: 0 0 1.25rem;
+  text-align: center;
+}
+
+@-webkit-keyframes autofill {
+  to {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  padding: .45rem 1.25rem .45rem 2.75rem;
+  height: calc(1.5em + 1rem + 2px);
+  font-size: .95rem;
+  color: #fff !important;
+  background-color: #444;
+  border: none;
+  border-radius: 2rem;
+}
+
+.form-control::placeholder {
+  color: #a5a5a5;
+  opacity: 1;
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+}
+
+label {
+  position: absolute;
+  margin-top: .575rem;
+  margin-left: 1rem;
+  color: #a5a5a5;
+}
+
+label i {
+  font-size: .915rem;
+}
+
+select {
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: unset;
+}
+
+.form-control option {
+  color: #000;
+}
+
+.mr-c {
+  margin-left: 1.2rem;
+}
+
+
+/*
+ * ---------- Style radio box ----------
+ */
+
+.col label {
+  margin: 0;
+}
+
+.custom-control {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-height: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.custom-control-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-control-input:checked~.custom-control-indicator {
+  color: #fff;
+  background-color: #ffaf14;
+}
+
+.custom-checkbox .custom-control-indicator {
+  border-radius: 50%;
+}
+
+.custom-control-indicator {
+  top: 4px;
+}
+
+.custom-control-indicator {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-control-description {
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+
+/*
+ * ---------- Style button ----------
+ */
+
+.btn-sm {
+  background: #fff;
+  font-size: .95rem;
+  padding: .585rem 1.8rem;
+  color: #333;
+  border-radius: 2rem;
+  width: 100%;
+  font-weight: 500;
+  border: none;
+}
+
+.btn-sm:hover {
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+  color: #fff;
+  transition: .5s;
+}
+
+
+/*
+ * ---------- Style link ----------
+ */
+
+.link-effect {
+  font-size: .9rem;
+  color: #fff;
+  padding: 6px 0;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+
+.link-effect:hover {
+  border-bottom: 1px solid #ffaf14;
+  color: #ffaf14;
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+.link-effect:focus {
+  color: #ffaf14;
+  text-decoration: none;
+  outline: none;
+}
+
+@media (max-width: 575.98px) {
+  .signin {
+    background-color: #333 !important;
+  }
+  .signin .login-panel {
+    width: calc(100%) !important;
+  }
+  .signup {
+    background-color: #333 !important;
+  }
+  .signup .login-panel {
+    overflow-y: scroll;
+    width: calc(100%) !important;
+  }
+  .reminder-password {
+    background-color: #333 !important;
+  }
+  .reminder-password .login-panel {
+    width: calc(100%) !important;
+  }
+}
+
+
+/*
+ * ---------- Footer ----------
+ */
+
+#footer {
+  font-size: 13px;
+  bottom: 0;
+  background-color: #333;
+  border-radius: .5rem;
+  margin-bottom: 1.25rem;
+  padding: 0 15px;
+  width: calc(100% - 2.5rem);
+  position: fixed;
+  margin: 1.25rem;
+}
+
+#footer .f-bot {
+  padding: 6px .25rem;
+}
+
+#footer .f-bot span {
+  padding: 2px 0;
+  display: inline-block;
+}
+
+#footer .f-bot .copyright {
+  text-align: right;
+}
+
+@media (max-width: 767.98px) {
+  #footer .f-bot .copyright {
+    text-align: left;
+  }
+  #footer .f-top {
+    padding: 3rem 0 2.5rem;
+  }
+  #footer .copyright {
+    display: none;
+  }
+}
+
+
+/*
+ * ---------- Bootstrap component custom css ----------
+ */
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
