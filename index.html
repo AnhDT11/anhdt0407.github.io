@@ -28,40 +28,40 @@
           <a class="color-gradient" href="index.html">F-HOUSE</a>
         </div>
         <p class="notification"> Thông tin đăng ký </p>
-        <!-- <form action="dashboard.jsp" method="post"> -->
-        <div class="form-group">
-          <label>
+        <form id="test-form">
+          <div class="form-group">
+            <label>
               <i class="far fa-envelope fa-fw"></i>
             </label>
-          <input type="text" class="form-control" placeholder="Họ và tên" id="name">
-        </div>
-        <div class="form-group">
-          <label>
+            <input type="text" class="form-control" placeholder="Họ và tên" name="name">
+          </div>
+          <div class="form-group">
+            <label>
               <i class="fas fa-key fa-fw"></i>
             </label>
-          <input type="text" class="form-control" placeholder="Khoá" id="k">
-        </div>
-        <div class="form-group">
-          <label>
+            <input type="text" class="form-control" placeholder="Khoá" name="k">
+          </div>
+          <div class="form-group">
+            <label>
               <i class="fas fa-key fa-fw"></i>
             </label>
-          <input type="text" class="form-control" placeholder="Số điện thoại" id="mobile">
-        </div>
-        <div class="form-group">
-          <div class="col">
-            <button onclick="register()" class="btn btn-sm">
+            <input type="text" class="form-control" placeholder="Số điện thoại" name="mobile">
+          </div>
+          <div class="form-group">
+            <div class="col">
+              <button type="submit" id="submit-form" class="btn btn-sm">
                 <i class="far fa-edit fa-fw mr-1"></i>Submit
               </button>
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <div class="col text-right">
-            <a class="link-effect" href="signin.html">
-              <i class="fas fa-sign-in-alt fa-fw mr-1"></i>Đăng nhập
-            </a>
+          <div class="form-group">
+            <div class="col text-right">
+              <a class="link-effect" href="signin.html">
+                <i class="fas fa-sign-in-alt fa-fw mr-1"></i>Đăng nhập
+              </a>
+            </div>
           </div>
-        </div>
-        <!-- </form> -->
+        </form>
       </div>
     </div>
   </div>
@@ -88,24 +88,20 @@
   <!-- Custom scripts for all pages-->
   <script src="assets/js/boarding-house/boarding-house.js"></script>
   <script>
-    function register() {
-      var url = 'https://script.google.com/macros/s/AKfycbwM3OfHAE3bpxiXk0BMgUk8SF9mSZ0iIlRVlHfEgCuIyDQuPx9s/exec';
+    var $form = $('form#test-form');
+    var url = 'https://script.google.com/macros/s/AKfycbwM3OfHAE3bpxiXk0BMgUk8SF9mSZ0iIlRVlHfEgCuIyDQuPx9s/exec';
 
-      var data = {
-        name: document.getElementById('name').value,
-        k: document.getElementById('k').value,
-        mobile: document.getElementById('mobile').value
-      };
-
+    $('#submit-form').on('click', function(e) {
+      e.preventDefault();
       $.ajax({
         url: url,
         method: "GET",
         dataType: "json",
-        data: data
-      }).done(function() {
-        alert('Đăng ký thành công.');
-      });
-    }
+        data: $form.serialize()
+      }).success(
+        alert('Đăng ký thành công.')
+      );
+    })
   </script>
 </body>
 
