@@ -5,104 +5,84 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/x-icon" href="assets/images/cover/favicon.ico">
-
-  <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="assets/css/all.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel='stylesheet' type='text/css' media='screen' href='assets/css/home.css'>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/boarding-house/form.css">
-
-  <title>Đăng ký</title>
+  <title>Hello, world!</title>
 </head>
 
-<body id="page-top" class="dark" onload="startTime()">
-
-  <div id="intro">
-    <div class="middle signup">
-      <div class="form-panel">
-        <div class="logo text-center">
-          <a class="color-gradient" href="index.html">F-HOUSE</a>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 mt-3">
+        <div class="box">
+          <div class="content">
+            <svg class="bi bi-calendar text-primary" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+            </svg>
+            <h3>6</h3>
+          </div>
+          <div class="description">
+            <span>Today</span>
+          </div>
         </div>
-        <p class="notification"> Thông tin đăng ký </p>
-        <form id="test-form">
-          <div class="form-group">
-            <label>
-              <i class="far fa-envelope fa-fw"></i>
-            </label>
-            <input type="text" class="form-control" placeholder="Họ và tên" name="name">
-          </div>
-          <div class="form-group">
-            <label>
-              <i class="fas fa-key fa-fw"></i>
-            </label>
-            <input type="text" class="form-control" placeholder="Khoá" name="k">
-          </div>
-          <div class="form-group">
-            <label>
-              <i class="fas fa-key fa-fw"></i>
-            </label>
-            <input type="text" class="form-control" placeholder="Số điện thoại" name="mobile">
-          </div>
-          <div class="form-group">
-            <div class="col">
-              <button type="submit" id="submit-form" class="btn btn-sm">
-                <i class="far fa-edit fa-fw mr-1"></i>Submit
-              </button>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col text-right">
-              <a class="link-effect" href="signin.html">
-                <i class="fas fa-sign-in-alt fa-fw mr-1"></i>Đăng nhập
-              </a>
-            </div>
-          </div>
-        </form>
       </div>
+
+      <div class="col-md-3 col-sm-6 mt-3">
+        <div class="box">
+          <div class="content">
+            <svg class="bi bi-clock-fill text-warning" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8 3.5a.5.5 0 00-1 0V9a.5.5 0 00.252.434l3.5 2a.5.5 0 00.496-.868L8 8.71V3.5z" clip-rule="evenodd"/>
+            </svg>
+            <h3>36</h3>
+          </div>
+          <div class="description">
+            <span>Scheduled</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mt-3">
+        <div class="box">
+          <div class="content">
+            <svg class="bi bi-inboxes-fill text-success" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M.125 11.17A.5.5 0 01.5 11H6a.5.5 0 01.5.5 1.5 1.5 0 003 0 .5.5 0 01.5-.5h5.5a.5.5 0 01.496.562l-.39 3.124A1.5 1.5 0 0114.117 16H1.883a1.5 1.5 0 01-1.489-1.314l-.39-3.124a.5.5 0 01.121-.393zM3.81.563A1.5 1.5 0 014.98 0h6.04a1.5 1.5 0 011.17.563l3.7 4.625a.5.5 0 01-.78.624l-3.7-4.624A.5.5 0 0011.02 1H4.98a.5.5 0 00-.39.188L.89 5.812a.5.5 0 11-.78-.624L3.81.563z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M.125 5.17A.5.5 0 01.5 5H6a.5.5 0 01.5.5 1.5 1.5 0 003 0A.5.5 0 0110 5h5.5a.5.5 0 01.496.562l-.39 3.124A1.5 1.5 0 0114.117 10H1.883A1.5 1.5 0 01.394 8.686l-.39-3.124a.5.5 0 01.121-.393z" clip-rule="evenodd"/>
+            </svg>
+            <h3>226</h3>
+          </div>
+          <div class="description">
+            <span>All</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mt-3">
+        <div class="box">
+          <div class="content">
+            <svg class="bi bi-flag-fill text-danger" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3.5 1a.5.5 0 01.5.5v13a.5.5 0 01-1 0v-13a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M3.762 2.558C4.735 1.909 5.348 1.5 6.5 1.5c.653 0 1.139.325 1.495.562l.032.022c.391.26.646.416.973.416.168 0 .356-.042.587-.126a8.89 8.89 0 00.593-.25c.058-.027.117-.053.18-.08.57-.255 1.278-.544 2.14-.544a.5.5 0 01.5.5v6a.5.5 0 01-.5.5c-.638 0-1.18.21-1.734.457l-.159.07c-.22.1-.453.205-.678.287A2.719 2.719 0 019 9.5c-.653 0-1.139-.325-1.495-.562l-.032-.022c-.391-.26-.646-.416-.973-.416-.833 0-1.218.246-2.223.916A.5.5 0 013.5 9V3a.5.5 0 01.223-.416l.04-.026z" clip-rule="evenodd"/>
+            </svg>
+            <h3>126</h3>
+          </div>
+          <div class="description">
+            <span>Flagged</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div id="footer" class="mt-u">
-    <div class="container-fluid">
-      <div class="row f-bot">
-        <div class="col-12 col-sm-12 col-md-6">
-          <i class="far fa-clock fa-fw mr-1"></i><span id=clock></span>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 copyright">
-          <span>Copyright © 2019 ANEST</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bootstrap core JavaScript-->
+  <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
-  <script src="assets/js/bootstrap/popper.min.js"></script>
-  <script src="assets/js/bootstrap/bootstrap.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="assets/js/boarding-house/boarding-house.js"></script>
-  <script>
-    var $form = $('form#test-form');
-    var url = 'https://script.google.com/macros/s/AKfycbwM3OfHAE3bpxiXk0BMgUk8SF9mSZ0iIlRVlHfEgCuIyDQuPx9s/exec';
-
-    $('#submit-form').on('click', function(e) {
-      e.preventDefault();
-      $.ajax({
-        url: url,
-        method: "GET",
-        dataType: "json",
-        data: $form.serialize()
-      }).success(
-        alert('Đăng ký thành công.')
-      );
-    })
-  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,15 @@
+nav .form-control {
+  border-radius: 100px;
+}
+
+nav .btn {
+  border-radius: 100px;
+}
+
+#cover img {
+  height: 50vh;
+}
+
+#about {
+  padding: 80px;
+}
