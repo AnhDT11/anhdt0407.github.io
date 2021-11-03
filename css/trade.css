@@ -1,0 +1,649 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-size: 13px;
+    background-color: #0d1317;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+}
+
+
+/*===== NAV =====*/
+
+.navbar {
+    padding: 2px 5px 1px;
+    margin-bottom: 3px;
+    border-bottom: 1px solid #363c4e;
+}
+
+.bg-dark {
+    background-color: #131722 !important;
+}
+
+.navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.navbar .clock {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-weight: normal;
+    color: #d0d5da;
+    border: 1px solid transparent;
+}
+
+.navbar .nav-item a {
+    padding-right: 0.8rem !important;
+    padding-left: 0.8rem !important;
+    font-weight: 600;
+    line-height: 16px;
+    color: #d0d5da !important;
+    border: 1px solid transparent;
+}
+
+.navbar .nav-item a:hover {
+    color: #fff !important;
+}
+
+.navbar .dropdown-menu {
+    margin: 5px 0 0;
+    border-radius: 0;
+    font-size: 14px;
+    left: auto;
+    right: -4px;
+    border: none;
+}
+
+.navbar .dropdown-menu a {
+    color: #555 !important;
+    font-weight: 400 !important;
+}
+
+.navbar .dropdown-menu a:hover {
+    color: #555 !important;
+    background-color: #e0e0e0;
+}
+
+.navbar .lang-mg {
+    margin-left: 22px;
+}
+
+.navbar .gil {
+    width: 1px;
+    background-color: #363c4e;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/*===== Common =====*/
+
+.pd-right {
+    padding-right: 3px;
+    padding-left: 0;
+}
+
+.down-r {
+    color: #ec4444 !important;
+}
+
+.up-g {
+    color: #3dd457 !important;
+}
+
+.color-w {
+    color: #ffffff !important;
+}
+
+.color-gr {
+    color: #8c8c8c !important;
+}
+
+.color-b {
+    color: #659aea!important;
+}
+
+.width-12 {
+    width: 12%;
+}
+
+.width-14 {
+    width: 14%;
+}
+
+.width-15 {
+    width: 15%;
+}
+
+.width-16 {
+    width: 16%;
+}
+
+.width-18 {
+    width: 18%;
+}
+
+.width-20 {
+    width: 20%;
+}
+
+.width-25 {
+    width: 25%;
+}
+
+
+/*===== Live Chart =====*/
+
+#live-chart {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#tradingview_a8fe9 {
+    width: 100%;
+    height: 640px;
+    margin-bottom: 3px;
+}
+
+#live-chart iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*===== Orders =====*/
+
+#live-chart .trade .orders {
+    width: 100%;
+    height: 280px;
+    background-color: #131722;
+    border: 1px solid #363c4e;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #363c4e;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #ff9916;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid #ff9916;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+    border-bottom: 1px solid #ff9916;
+}
+
+.orders .nav-link {
+    padding: .2rem 0.8rem .4rem;
+}
+
+.nav-tabs a {
+    color: #8c8c8c;
+}
+
+.tab-content {
+    padding: 5px 0;
+}
+
+.orders table {
+    width: 100%;
+}
+
+.orders tr th {
+    color: #8c8c8c;
+    font-size: 13px;
+    padding-bottom: 3px;
+    font-weight: normal;
+}
+
+.orders tr td {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+.orders .title {
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.orders .tab-content {
+    padding: 5px 0;
+}
+
+.orders .list-open-orders,
+.orders .list-order-history,
+.orders .list-funds {
+    width: 100%;
+    height: 205px;
+    overflow-y: scroll;
+    padding: 0 10px 0 13px;
+    margin-top: 5px;
+}
+
+
+/*===== Buy - Sell =====*/
+
+#live-chart .trade .token-buy-sell {
+    width: 100%;
+    height: 280px;
+    padding: 0 0 0 3px;
+}
+
+#live-chart .trade .token-trading {
+    width: 100%;
+    height: 280px;
+    background-color: #131722;
+    border: 1px solid #363c4e;
+}
+
+#live-chart .trade .token-buy {
+    width: 100%;
+}
+
+#live-chart .trade .token-sell {
+    width: 100%;
+}
+
+.token-trading .nav-link {
+    padding: .2rem 1rem .4rem;
+}
+
+.token-trading table {
+    width: 100%;
+}
+
+.token-trading tr th {
+    color: #8c8c8c;
+    font-size: 13px;
+    padding-bottom: 3px;
+}
+
+.token-trading tr td {
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 4px;
+}
+
+.token-trading tr td .buy-dv {
+    position: absolute;
+    color: #8c8c8c;
+    right: 19px;
+}
+
+.token-trading tr td .sell-dv {
+    position: absolute;
+    color: #8c8c8c;
+    right: 19px;
+}
+
+.token-trading input {
+    width: 100%;
+    padding-bottom: 4px;
+    color: #fff;
+    font-size: 13px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #8c8c8c;
+}
+
+.token-trading input:focus {
+    transition: 0.6s;
+    outline: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+.token-trading tr td a {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    color: #8c8c8c;
+    border: 1px dashed #8c8c8c;
+    padding: 2px 5px 3px;
+    margin-top: 3px;
+}
+
+.token-trading tr td a:hover {
+    color: #fff;
+    border-color: #fff;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.token-trading button {
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.token-trading .btn-trade {
+    height: 36px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+.token-trading .filed input[readonly]:hover {
+    cursor: pointer;
+}
+
+.token-trading .btn-sell {
+    background-color: #c73d3d;
+    border: 1px solid #c73d3d;
+}
+
+.token-trading .btn-buy {
+    background-color: #3a9448;
+    border: 1px solid #3a9448;
+}
+
+.token-trading .btn-sell:hover {
+    background-color: #ec4444;
+    border: 1px solid #ec4444;
+}
+
+.token-trading .btn-buy:hover {
+    background-color: #46aa55;
+    border: 1px solid #46aa55;
+}
+
+
+/*===== Token Info =====*/
+
+#market-info {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#market-info .token-info {
+    width: 100%;
+    height: 95px;
+    padding: 6px 10px 5px;
+    background-color: #131722;
+    border: 1px solid #363c4e;
+    margin-bottom: 3px;
+}
+
+#market-info .token-info h5 {
+    color: #e4e4e4;
+    margin-bottom: 17px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#market-info .token-info h5:hover {
+    color: #ff9916;
+}
+
+#list-search {
+    display: none;
+}
+
+#market-info .token-info .list-search {
+    width: 550px;
+    min-height: 150px;
+    background-color: #0d1317;
+    border: 1px solid #363c4e;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    z-index: 1000;
+}
+
+#market-info .token-info .list-search .title tr th {
+    padding: 1px 5px 0;
+}
+
+#market-info .token-info .list-search-box {
+    background-color: transparent;
+    border: 1px solid #363c4e;
+    height: 24px;
+    margin-top: 3px;
+    margin-left: 58px;
+    width: 200px;
+    padding-left: 7px;
+    padding-bottom: 2px;
+    color: #e4e4e4;
+}
+
+#market-info .token-info .tab-content {
+    padding: 0;
+}
+
+#market-info .token-info .title {
+    border-bottom: 1px solid #222631;
+}
+
+#market-info .token-info .list-coin-search {
+    width: 100%;
+    overflow-y: scroll;
+    min-height: 100px;
+    max-height: 205px;
+    padding: 5px 5px 10px;
+}
+
+#market-info .token-info .list-coin-search tr {
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+#market-info .token-info .list-coin-search tr:hover {
+    background-color: #22252d;
+}
+
+#market-info .token-info .list-coin-search td {
+    padding: 5px 8px;
+}
+
+#market-info .token-info .list-coin-search td h4 {
+    font-weight: normal;
+    color: #8c8c8c;
+}
+
+#market-info .token-info .list-coin-search td a {
+    color: #fff;
+}
+
+#market-info .token-info .list-coin-search td a:hover {
+    text-decoration: none;
+    color: #ff9916;
+}
+
+#market-info .token-info .search-icon {
+    position: absolute;
+    color: #e4e4e4;
+    right: 10px;
+    top: 9px;
+}
+
+#market-info .token-info .list-search-box:focus {
+    outline: #fff;
+}
+
+#market-info .token-info .nav-link {
+    display: block;
+    padding: .2rem 0.8rem .4rem;
+}
+
+#market-info .token-info h6 {
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+#market-info .token-info p {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+#market-info .token-info span {
+    color: #8c8c8c;
+}
+
+
+/*===== List Buy-Sell =====*/
+
+#market-info .title {
+    padding: 3px 14px 6px 10px;
+    border-bottom: 1px solid #363c4e;
+}
+
+#market-info table {
+    width: 100%;
+}
+
+#market-info tr th {
+    color: #8c8c8c;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#market-info tr td {
+    color: #fff;
+    font-size: 12px;
+}
+
+#market-info .list-buy {
+    width: 100%;
+    height: 539px;
+    margin-top: 3px;
+    background-color: #131722;
+    border: 1px solid #363c4e;
+    border-right: none;
+}
+
+#market-info .list-buy-orders {
+    width: 100%;
+    height: 495px;
+    overflow-y: scroll;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+
+#market-info .list-sell {
+    width: 100%;
+    height: 539px;
+    margin-top: 3px;
+    background-color: #131722;
+    border: 1px solid #363c4e;
+}
+
+#market-info .list-sell-orders {
+    width: 100%;
+    height: 495px;
+    overflow-y: scroll;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+
+
+/*===== List Market Live Orders =====*/
+
+#market-info .market-orders {
+    width: 100%;
+    height: 280px;
+    margin-top: 3px;
+    background-color: #131722;
+    border: 1px solid #363c4e;
+}
+
+#market-info .list-market-orders {
+    width: 100%;
+    height: 235px;
+    overflow-y: scroll;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+
+
+/*==== Modal ====*/
+
+.modal-content {
+    border-radius: .2rem;
+}
+
+.modal-header {
+    border-bottom: 1px solid transparent;
+}
+
+.modal-header .close {
+    padding: .5rem .8rem;
+}
+
+.modal-footer {
+    border-top: 1px solid transparent;
+}
+
+.btn {
+    padding: .25rem .85rem .3rem;
+    font-size: .8rem;
+    line-height: 1.5;
+    border-radius: 2px;
+}
+
+.modal-body {
+    padding: 1rem 1rem 0;
+}
+
+.modal-body h4 {
+    font-weight: 400;
+    color: #000;
+}
+
+.modal-dialog {
+    margin: 10% auto;
+}
+
+.btn-white {
+    background-color: #fff;
+    border: 1px solid #cccccc;
+}
+
+.btn-white:hover {
+    border: 1px solid #8a8a8a;
+}
+
+.max-w-none {
+    max-width: none;
+}
+
+
+/*
+ *  STYLE 3
+ */
+
+#style-3::-webkit-scrollbar-track {
+    background-color: #131722;
+    border-radius: 0;
+}
+
+#style-3::-webkit-scrollbar {
+    width: 4px;
+    background-color: #131722;
+}
+
+#style-3::-webkit-scrollbar-thumb {
+    background-color: #2f3341;
+    border-radius: 0;
+}

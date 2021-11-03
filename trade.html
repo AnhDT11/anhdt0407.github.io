@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Token Trading</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" href="img/favicon.ico">
+
+    <!-- Custom Fonts -->
+    <script defer src="font-awesome/js/fontawesome-all.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/trade.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+
+    <script type="text/javascript">
+        function display_c() {
+            var refresh = 1000; // refresh rate in milli seconds
+            mytime = setTimeout('startTime()', refresh)
+        }
+
+        function startTime() {
+            var strcount
+            var x = new Date()
+            var x1 = x.toUTCString(); // changing the display to UTC string
+            document.getElementById('clock').innerHTML = x1 + "/UTC";
+            tt = display_c();
+        }
+    </script>
+
+</head>
+</head>
+
+<body onload="startTime()">
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a href="index.html"><img src="img/suncex_logo.png" style="height: 28px; margin-left: 3px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <span id="clock" class="clock"></span>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+                <div class="gil"></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-user-plus"></i> Register</a>
+                </li>
+                <div class="gil"></div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"><i class="fas fa-check fa-fw"></i> English</a>
+                        <a class="dropdown-item" href="#"><i class="lang-mg"></i> 한국어</a>
+                        <a class="dropdown-item" href="#"><i class="lang-mg"></i> 简体中文</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="row">
+        <div id="live-chart" class="col-sm-9 col-md-9 col-lg-9 pd-right">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div id="tradingview_a8fe9"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        "symbol": "COINBASE:ETHUSD",
+                        "interval": "D",
+                        "timezone": "Etc/UTC",
+                        "theme": "Dark",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "hide_top_toolbar": true,
+                        "withdateranges": true,
+                        "allow_symbol_change": true,
+                        "hideideas": true,
+                        "container_id": "tradingview_a8fe9"
+                    });
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+
+            <div class="trade">
+                <div class="row">
+                    <div class="orders col-sm-7 col-md-7 col-lg-7 pd-zero">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#openOrders" role="tab">Open Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#orderHistory" role="tab">Order History</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#funds" role="tab">Funds</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="openOrders" role="tabpanel">
+                                <div class="title">
+                                    <table>
+                                        <tr>
+                                            <th class="text-left width-20">Date</th>
+                                            <th class="text-center width-12">Pair</th>
+                                            <th class="text-center width-12">Type</th>
+                                            <th class="text-right width-14">Price</th>
+                                            <th class="text-right width-14">Size</th>
+                                            <th class="text-right width-14">Total</th>
+                                            <th class="text-right width-14">Action</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="style-3" class="list-open-orders">
+                                    <table>
+                                        <tr>
+                                            <td class="text-left width-20">02-03-2018 &nbsp; 02:09:38</td>
+                                            <td class="text-center width-12">ETH/USDT</td>
+                                            <td class="text-center down-r width-12">LIM Sell</td>
+                                            <td class="text-right width-14">0.00023500</td>
+                                            <td class="text-right width-14">657.2870</td>
+                                            <td class="text-right width-14">0.15446244</td>
+                                            <td class="text-right width-14"><a href="" class="down-r">Cancel</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left width-20">02-03-2018 &nbsp; 02:09:38</td>
+                                            <td class="text-center width-12">ETH/USDT</td>
+                                            <td class="text-center down-r width-12">LIM Sell</td>
+                                            <td class="text-right width-14">0.00023500</td>
+                                            <td class="text-right width-14">657.2870</td>
+                                            <td class="text-right width-14">0.15446244</td>
+                                            <td class="text-right width-14"><a href="" class="down-r">Cancel</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+                            <div class="tab-pane" id="orderHistory" role="tabpanel">
+                                <div class="title">
+                                    <table>
+                                        <tr>
+                                            <th class="text-left width-18">Date</th>
+                                            <th class="text-center width-12">Pair</th>
+                                            <th class="text-center width-12">Type</th>
+                                            <th class="text-right width-12">Price</th>
+                                            <th class="text-right width-12">Size</th>
+                                            <th class="text-right width-12">Total</th>
+                                            <th class="text-right width-12">Action</th>
+                                            <th class="text-right width-10">Operation</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="style-3" class="list-order-history">
+                                    <table>
+                                        <tr>
+                                            <td class="text-left width-18">02-03-2018 &nbsp; 02:09:38</td>
+                                            <td class="text-center width-12">ETH/USDT</td>
+                                            <td class="text-center down-r width-12">LIM Sell</td>
+                                            <td class="text-right width-12">0.00023500</td>
+                                            <td class="text-right width-12">657.2870</td>
+                                            <td class="text-right width-12">0.15446244</td>
+                                            <td class="text-right up-g width-12">Executed</td>
+                                            <td class="text-right width-10"><a href="" class="color-b">Detail</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left width-18">02-03-2018 &nbsp; 02:09:38</td>
+                                            <td class="text-center width-12">ETH/USDT</td>
+                                            <td class="text-center down-r width-12">LIM Sell</td>
+                                            <td class="text-right width-12">0.00023500</td>
+                                            <td class="text-right width-12">657.2870</td>
+                                            <td class="text-right width-12">0.15446244</td>
+                                            <td class="text-right down-r width-12">Cancelled</td>
+                                            <td class="text-right width-10"><a href="" class="color-b">Detail</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="funds" role="tabpanel">
+                                <div class="title">
+                                    <table>
+                                        <tr>
+                                            <th class="width-20 text-left">Coin</th>
+                                            <th class="width-30 text-right">Available Balance</th>
+                                            <th class="width-50 text-right">Total Balance</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="style-3" class="list-funds">
+                                    <table>
+                                        <tr>
+                                            <td class="width-20 text-left">ETH</td>
+                                            <td class="width-30 text-right">12345.22</td>
+                                            <td class="width-50 text-right">1234522 USTD</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="token-buy-sell col-sm-5 col-md-5 col-lg-5 pd-zero">
+                        <div class="row">
+                            <div class="token-trading col-sm-12 col-md-12 col-lg-12 pd-zero" style="min-width: 420px;">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#limit" role="tab">Limit</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#market" role="tab">Market</a>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="limit" role="tabpanel">
+                                        <div class="row">
+                                            <div class="token-buy col-sm-6 col-md-6 col-lg-6 pad-r-10">
+                                                <table>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="float-left">Buy ETH</span>
+                                                            <span class="float-right">0.00000000 USDT</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="buy-dv">USDT</span>
+                                                            <input type="text" id="" name="" placeholder="Price">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="buy-dv">ETH</span>
+                                                            <input type="text" id="" name="" placeholder="Amount">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="width-25"><a href="">25%</a></td>
+                                                        <td class="width-25"><a href="">50%</a></td>
+                                                        <td class="width-25"><a href="">75%</a></td>
+                                                        <td class="width-25"><a href="">100%</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span style="color: #8c8c8c">Total:</span>
+                                                            <span class="float-right">0.00000000 USDT</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <button type="submit" class="btn-trade btn-buy">Buy</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="token-sell col-sm-6 col-md-6 col-lg-6 pad-l-10">
+                                                <table>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="float-left">Sell ETH</span>
+                                                            <span class="float-right">0.00000000 ETH</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="sell-dv">USDT</span>
+                                                            <input type="text" id="" name="" placeholder="Price">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="sell-dv">ETH</span>
+                                                            <input type="text" id="" name="" placeholder="Amount">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="width-25"><a href="">25%</a></td>
+                                                        <td class="width-25"><a href="">50%</a></td>
+                                                        <td class="width-25"><a href="">75%</a></td>
+                                                        <td class="width-25"><a href="">100%</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span style="color: #8c8c8c">Total:</span>
+                                                            <span class="float-right">0.00000000 USDT</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <button type="submit" class="btn-trade btn-sell">Sell</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="market" role="tabpanel">
+                                        <div class="row">
+                                            <div class="token-buy col-sm-6 col-md-6 col-lg-6 pad-r-10">
+                                                <table>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="float-left">Buy ETH</span>
+                                                            <span class="float-right">0.00000000 USDT</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="buy-dv">USDT</span>
+                                                            <input type="text" id="" name="" readonly autocomplete="off" value="Market price">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="buy-dv">ETH</span>
+                                                            <input type="text" id="" name="" placeholder="Amount">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="width-25"><a href="">25%</a></td>
+                                                        <td class="width-25"><a href="">50%</a></td>
+                                                        <td class="width-25"><a href="">75%</a></td>
+                                                        <td class="width-25"><a href="">100%</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <button type="submit" class="btn-trade btn-buy">Buy</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="token-sell col-sm-6 col-md-6 col-lg-6 pad-l-10">
+                                                <table>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="float-left">Sell ETH</span>
+                                                            <span class="float-right">0.00000000 ETH</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="sell-dv">USDT</span>
+                                                            <input type="text" id="" name="" readonly autocomplete="off" value="Market price">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <span class="sell-dv">ETH</span>
+                                                            <input type="text" id="" name="" placeholder="Amount">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="width-25"><a href="">25%</a></td>
+                                                        <td class="width-25"><a href="">50%</a></td>
+                                                        <td class="width-25"><a href="">75%</a></td>
+                                                        <td class="width-25"><a href="">100%</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <button type="submit" class="btn-trade btn-sell">Sell</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="market-info" class="col-sm-3 col-md-3 col-lg-3 pd-zero">
+            <div class="token-info">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6 pd-zero">
+                        <h5 id="show">
+                            ETH / USDT &nbsp;
+                            <i class="fas fa-caret-down"></i>
+                        </h5>
+
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 pd-zero">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6 pd-zero">
+                                <h6>
+                                    <span class="up-g">858.0138</span>
+                                </h6>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6 pd-zero">
+                                <h6>
+                                    <span>$858.94</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="list-search" class="list-search">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#favorites" role="tab">Favorites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#btc" role="tab">BTC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#eth" role="tab">ETH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#SUX" role="tab">SUX</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#usdt" role="tab">USDT</a>
+                        </li>
+                        <li class="nav-item">
+                            <input type="text" class="list-search-box">
+                        </li>
+                        <i class="fas fa-search search-icon"></i>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="favorites" role="tabpanel">
+                            <div class="title">
+                                <table>
+                                    <tr>
+                                        <th class="text-left width-10"></th>
+                                        <th class="text-left width-20">Pair</th>
+                                        <th class="text-left width-25">Price</th>
+                                        <th class="text-right width-20">24h Change</th>
+                                        <th class="text-right width-25">24h Volume</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="style-3" class="list-coin-search">
+                                <table>
+                                    <tr>
+                                        <td class="text-left width-10">
+                                            <i class="fas fa-star"></i>
+                                        </td>
+                                        <td class="text-left width-20">
+                                            <a href="">ETH/BTC</a>
+                                        </td>
+                                        <td class="text-left width-25">
+                                            <span class="color-w">0.076216</span><span> / $ 868.27</span>
+                                        </td>
+                                        <td class="text-right width-20">
+                                            <span class="up-g">+1.72%</span>
+                                        </td>
+                                        <td class="text-right width-25">
+                                            <span class="color-w">5,379.17 BTC</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="btc" role="tabpanel">
+                            <div class="title">
+                                <table>
+                                    <tr>
+                                        <th class="text-left width-10"></th>
+                                        <th class="text-left width-20">Pair</th>
+                                        <th class="text-left width-25">Price</th>
+                                        <th class="text-right width-20">24h Change</th>
+                                        <th class="text-right width-25">24h Volume</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="style-3" class="list-coin-search">
+                                <table>
+                                    <tr>
+                                        <td class="text-left width-10">
+                                            <i class="far fa-star"></i>
+                                        </td>
+                                        <td class="text-left width-20">
+                                            <a href="">TRX/BTC</a>
+                                        </td>
+                                        <td class="text-left width-25">
+                                            <span class="color-w">0.00000421</span><span> / $ 0.05</span>
+                                        </td>
+                                        <td class="text-right width-20">
+                                            <span class="down-r">-1.12%</span>
+                                        </td>
+                                        <td class="text-right width-25">
+                                            <span class="color-w">1,379.17 BTC</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left width-10">
+                                            <i class="far fa-star"></i>
+                                        </td>
+                                        <td class="text-left width-20">
+                                            <a href="">ETH/BTC</a>
+                                        </td>
+                                        <td class="text-left width-25">
+                                            <span class="color-w">0.076216</span><span> / $ 868.27</span>
+                                        </td>
+                                        <td class="text-right width-20">
+                                            <span class="up-g">+1.72%</span>
+                                        </td>
+                                        <td class="text-right width-25">
+                                            <span class="color-w">5,379.17 BTC</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="eth" role="tabpanel">
+                            <div class="title">
+                                <table>
+                                    <tr>
+                                        <th class="text-left width-10"></th>
+                                        <th class="text-left width-20">Pair</th>
+                                        <th class="text-left width-25">Price</th>
+                                        <th class="text-right width-20">24h Change</th>
+                                        <th class="text-right width-25">24h Volume</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="style-3" class="list-coin-search">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h4 class="text-center">No data</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="SUX" role="tabpanel">
+                            <div class="title">
+                                <table>
+                                    <tr>
+                                        <th class="text-left width-10"></th>
+                                        <th class="text-left width-20">Pair</th>
+                                        <th class="text-left width-25">Price</th>
+                                        <th class="text-right width-20">24h Change</th>
+                                        <th class="text-right width-25">24h Volume</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="style-3" class="list-coin-search">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h4 class="text-center">No data</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="usdt" role="tabpanel">
+                            <div class="title">
+                                <table>
+                                    <tr>
+                                        <th class="text-left width-10"></th>
+                                        <th class="text-left width-20">Pair</th>
+                                        <th class="text-left width-25">Price</th>
+                                        <th class="text-right width-20">24h Change</th>
+                                        <th class="text-right width-25">24h Volume</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="style-3" class="list-coin-search">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h4 class="text-center">No data</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 pd-zero text-left">
+                        <p class="down-r">-1.95%</p>
+                        <span>24h Change</span>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 pd-zero text-left">
+                        <p>887.4911</p>
+                        <span>24h High</span>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 pd-zero text-left">
+                        <p>844.5000</p>
+                        <span>24h Low</span>
+                    </div>
+                    <div class=" col-sm-3 col-md-3 col-lg-3 pd-zero text-left">
+                        <p>1,192 ETH</p>
+                        <span>24h Volume</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="list-buy col-sm-6 col-md-6 col-lg-6 pd-zero ">
+                    <div class="title">
+                        <table>
+                            <tr>
+                                <th class="text-left width-30">Price</th>
+                                <th class="text-right width-30">Amount</th>
+                                <th class="text-right width-40">Total</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="style-3" class="list-buy-orders">
+                        <table>
+                            <tr>
+                                <td class="text-left down-r width-30">885.3625</td>
+                                <td class="text-right width-30">0.0233</td>
+                                <td class="text-right width-40">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">883.8524</td>
+                                <td class="text-right">0.0411</td>
+                                <td class="text-right">36.3263</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">882.7967</td>
+                                <td class="text-right">6.0075</td>
+                                <td class="text-right">5,303.4011</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">882.4040</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">858.0138</td>
+                                <td class="text-right">0.9005</td>
+                                <td class="text-right">772.6414</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">858.0136</td>
+                                <td class="text-right">0.1270</td>
+                                <td class="text-right">108.9677</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">857.1558</td>
+                                <td class="text-right">0.0081</td>
+                                <td class="text-right">6.9429</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">855.2617</td>
+                                <td class="text-right">0.0041</td>
+                                <td class="text-right">3.5065</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">850.2000</td>
+                                <td class="text-right">0.0367</td>
+                                <td class="text-right">31.2023</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">844.5000</td>
+                                <td class="text-right">0.3631</td>
+                                <td class="text-right">306.6379</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">844.0000</td>
+                                <td class="text-right">0.0500</td>
+                                <td class="text-right">42.2000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">840.0000</td>
+                                <td class="text-right">0.1000</td>
+                                <td class="text-right">84.0000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">839.0000</td>
+                                <td class="text-right">0.1000</td>
+                                <td class="text-right">83.9000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">838.0000</td>
+                                <td class="text-right">0.1000</td>
+                                <td class="text-right">83.8000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left down-r">836.0000</td>
+                                <td class="text-right">0.1000</td>
+                                <td class="text-right">83.6000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="list-sell col-sm-6 col-md-6 col-lg-6 pd-zero">
+                    <div class="title">
+                        <table>
+                            <tr>
+                                <th class="text-left width-30">Price</th>
+                                <th class="text-right width-30">Amount</th>
+                                <th class="text-right width-40">Total</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="style-3" class="list-sell-orders">
+                        <table>
+                            <tr>
+                                <td class="text-left up-g width-30">858.0138</td>
+                                <td class="text-right width-30">0.9005</td>
+                                <td class="text-right width-40">772.6414</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">858.0136</td>
+                                <td class="text-right">0.1270</td>
+                                <td class="text-right">108.9677</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">857.1558</td>
+                                <td class="text-right">0.0081</td>
+                                <td class="text-right">6.9429</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">855.2617</td>
+                                <td class="text-right">0.0041</td>
+                                <td class="text-right">3.5065</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">850.2000</td>
+                                <td class="text-right">0.0367</td>
+                                <td class="text-right">31.2023</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">844.5000</td>
+                                <td class="text-right">0.3631</td>
+                                <td class="text-right">306.6379</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">844.0000</td>
+                                <td class="text-right">0.0500</td>
+                                <td class="text-right">42.2000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">840.0000</td>
+                                <td class="text-right">0.1000</td>
+                                <td class="text-right">84.0000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">839.1295</td>
+                                <td class="text-right">0.0014</td>
+                                <td class="text-right">1.1747</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">835.6913</td>
+                                <td class="text-right">0.0205</td>
+                                <td class="text-right">17.1316</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">835.0000</td>
+                                <td class="text-right">0.0104</td>
+                                <td class="text-right">8.6840</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">830.5211</td>
+                                <td class="text-right">0.0136</td>
+                                <td class="text-right">11.2950</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">824.9184</td>
+                                <td class="text-right">0.0113</td>
+                                <td class="text-right">9.3215</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">820.3496</td>
+                                <td class="text-right">1.5490</td>
+                                <td class="text-right">1,270.7215</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left up-g">820.0000</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="market-orders col-sm-12 col-md-12 col-lg-12 pd-zero">
+                    <div class="title">
+                        <table>
+                            <tr>
+                                <th class="text-left width-25">Date/Time</th>
+                                <th class="text-right width-20">Price</th>
+                                <th class="text-right width-20">Amount</th>
+                                <th class="text-right width-20">Total</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="style-3" class="list-market-orders">
+                        <table>
+                            <tr>
+                                <td class="text-left width-25">02-03-2018 &nbsp; 02:09:38</td>
+                                <td class="text-right down-r width-20">885.3625</td>
+                                <td class="text-right width-20">0.0233</td>
+                                <td class="text-right width-20">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:22</td>
+                                <td class="text-right down-r">883.8524</td>
+                                <td class="text-right">0.0411</td>
+                                <td class="text-right">36.3263</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:08:31</td>
+                                <td class="text-right up-g">882.7967</td>
+                                <td class="text-right">6.0075</td>
+                                <td class="text-right">5,303.4011</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:08:31</td>
+                                <td class="text-right up-g">882.4040</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:38</td>
+                                <td class="text-right down-r">885.3625</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:22</td>
+                                <td class="text-right down-r">883.8524</td>
+                                <td class="text-right">0.0411</td>
+                                <td class="text-right">36.3263</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:38</td>
+                                <td class="text-right up-g">885.3625</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:08:31</td>
+                                <td class="text-right down-r">882.7967</td>
+                                <td class="text-right">6.0075</td>
+                                <td class="text-right">5,303.4011</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:08:31</td>
+                                <td class="text-right down-r">882.4040</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:38</td>
+                                <td class="text-right down-r">885.3625</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:22</td>
+                                <td class="text-right down-r">883.8524</td>
+                                <td class="text-right">0.0411</td>
+                                <td class="text-right">36.3263</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:38</td>
+                                <td class="text-right up-g">885.3625</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:38</td>
+                                <td class="text-right up-g">885.3625</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:08:31</td>
+                                <td class="text-right down-r">882.7967</td>
+                                <td class="text-right">6.0075</td>
+                                <td class="text-right">5,303.4011</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:08:31</td>
+                                <td class="text-right down-r">882.4040</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:38</td>
+                                <td class="text-right down-r">885.3625</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:22</td>
+                                <td class="text-right down-r">883.8524</td>
+                                <td class="text-right">0.0411</td>
+                                <td class="text-right">36.3263</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">02-03-2018 &nbsp; 02:09:38</td>
+                                <td class="text-right up-g">885.3625</td>
+                                <td class="text-right">0.0233</td>
+                                <td class="text-right">20.6289</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog max-w-none width-30">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <div class="text-warning mg-bottom-30">
+                            <i class="fas fa-exclamation-triangle fa-3x"></i>
+                        </div>
+                        <h4>Warning!</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Fusce ultrices euismod lobortis.</p>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery/jquery.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js "></script>
+    <script src="js/bootstrap/bootstrap.min.js "></script>
+    <script src="js/particles-custom.js "></script>
+    <script>
+        $(document).ready(function() {
+            $("#show").click(function() {
+                $("#list-search").toggle();
+            });
+        });
+
+        $(document).mouseup(function(e) {
+            var container = $("#list-search");
+
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                container.fadeOut();
+            }
+        });
+
+
+        $(window).on('load', function() {
+            $('#myModal').modal('show');
+        });
+    </script>
+
+</body>
+
+</html>

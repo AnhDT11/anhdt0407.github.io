@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SunCEX - Sign Up</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" href="img/favicon.ico">
+
+    <!-- Custom Fonts -->
+    <script defer src="font-awesome/js/fontawesome-all.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+
+</head>
+
+<body>
+    <!-- Cover -->
+    <div id="particles-js">
+
+        <div id="intro">
+            <div class="middle signup">
+                <div class="login-panel">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/suncex_logo2.png"></a>
+                    </div>
+                    <h3>CREATE NEW ACCOUNT!</h3>
+                    <p class="notification"> Notification!!! </p>
+                    <form class="js-validation-signup">
+                        <div class="form-group">
+                            <div class="col">
+                                <div class="form-material floating">
+                                    <input type="text" class="f-control" id="signup-username" name="signup-username" onchange="setLabelUsername()">
+                                    <label for="signup-username" id="l-username">
+                                    <i class="fas fa-user fa-fw"></i>&nbsp;
+                                    Username
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col">
+                                <div class="form-material floating">
+                                    <input type="email" class="f-control" id="signup-email" name="signup-email" onchange="setLabelEmail()">
+                                    <label for="signup-email" id="l-email">
+                                    <i class="far fa-envelope fa-fw"></i>&nbsp;
+                                    Email
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col">
+                                <div class="form-material floating">
+                                    <input type="password" class="f-control" id="signup-password" name="signup-password" onchange="setLabelPassword()">
+                                    <label for="signup-password" id="l-password">
+                                    <i class="fas fa-key fa-fw"></i>&nbsp;
+                                    Password
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col">
+                                <div class="form-material floating">
+                                    <input type="password" class="f-control" id="signup-password-confirm" name="signup-password-confirm" onchange="setLabelPasswordCf()">
+                                    <label for="signup-password-confirm" id="l-password-cf">
+                                    <i class="fas fa-key fa-fw"></i>&nbsp;
+                                    Password Confirmation
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col">
+                                <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="signup-terms" name="signup-terms">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">I agree to Terms &amp; Conditions</span>
+                            </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-sm">
+                            <i class="fas fa-edit mg-r-5"></i> Create Account
+                        </button>
+                        </div>
+                        <div class="form-group">
+                            <a class="link-effect mg-r-20" href="javascript:void(0)" data-toggle="modal" data-target="#modal-terms">
+                                <i class="fa fa-book mg-r-5" aria-hidden="true"></i> Read Terms
+                            </a>
+                            <a class="link-effect" href="signin.html">
+                                <i class="fas fa-sign-in-alt mg-r-5"></i> Sign In
+                            </a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-terms">Terms</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; © 2018-2019 SunCEX.com All Rights Reserved
+            </p>
+        </footer>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="modal-terms">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Modal body..
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles-custom.js"></script>
+
+    <!-- Validate -->
+    <script src="js/authentic/jquery.validate.min.js"></script>
+    <script src="js/authentic/op_auth_signup.js"></script>
+
+</body>
+
+</html>

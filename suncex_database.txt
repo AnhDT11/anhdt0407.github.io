@@ -1,0 +1,148 @@
+DROP SCHEMA IF EXISTS `suncex` ;
+
+-- -----------------------------------------------------
+-- Schema suncex
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `suncex` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `suncex` ;
+
+-- -----------------------------------------------------
+-- Table `suncex`.`role`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `suncex`.`role` ;
+
+CREATE TABLE IF NOT EXISTS `suncex`.`role` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Role_Name` NVARCHAR(45) NOT NULL,
+  `Note` NVARCHAR(100) NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+INSERT INTO `suncex`.`role` (`Role_Name`) VALUES ('ADMIN');
+INSERT INTO `suncex`.`role` (`Role_Name`) VALUES ('MEMBER');
+
+-- -----------------------------------------------------
+-- Table `suncex`.`accounts`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `suncex`.`accounts` ;
+
+CREATE TABLE IF NOT EXISTS `suncex`.`accounts` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Role_Id` INT NULL,
+  `Referral_Id` INT NULL,
+  `User_Name` NVARCHAR(45) NULL,
+  `Email` NVARCHAR(45) NULL,
+  `Password` NVARCHAR(100) NULL,  
+  `Status` INT NULL,
+  `Created_Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Active_Code` NVARCHAR(10) NULL,
+  `Invite_Code` NVARCHAR(10) NULL,
+  `Ip_Address` NVARCHAR(50) NULL,
+  `Note` NVARCHAR(100) NULL,
+  PRIMARY KEY (`Id`),
+  FOREIGN KEY (`Role_Id`) REFERENCES `role`(`Id`))
+ENGINE = InnoDB;
+
+INSERT INTO `suncex`.`accounts` (`Role_Id`, `Referral_Id`, `User_Name`, `Email`, `Password`, `Status`) VALUES ('1', '0', 'admin', 'admin@gmail.com', '25111211', '1');
+
+-- -----------------------------------------------------
+-- Table `suncex`.`transaction`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `suncex`.`transaction` ;
+
+CREATE TABLE IF NOT EXISTS `suncex`.`transaction` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Account_Id` INT NULL,
+  `Amount_Token` INT NULL,
+  `Amount_Token_Bonus` INT NULL,
+  `Created_Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Note` NVARCHAR(100) NULL,
+  PRIMARY KEY (`Id`),
+  FOREIGN KEY (`Account_Id`) REFERENCES `accounts`(`Id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `suncex`.`balances`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `suncex`.`balances` ;
+
+CREATE TABLE IF NOT EXISTS `suncex`.`balances` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Account_Id` INT NULL,
+  `Amount_Token` INT NULL,
+  `Amount_Token_Bonus` INT NULL,
+  `Created_Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Note` NVARCHAR(100) NULL,
+  PRIMARY KEY (`Id`),
+  FOREIGN KEY (`Account_Id`) REFERENCES `accounts`(`Id`))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `suncex`.`transaction`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `suncex`.`buy_token` ;
+
+CREATE TABLE IF NOT EXISTS `suncex`.`buy_token` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Account_Id` INT NULL,
+  `Amount_ETH` DOUBLE NULL,
+  `Status_Buy` INT NULL,
+  `Confirm_Status` INT NULL,
+  `Created_Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Note` NVARCHAR(100) NULL,
+  PRIMARY KEY (`Id`),
+  FOREIGN KEY (`Account_Id`) REFERENCES `accounts`(`Id`))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `suncex`.`airdrop`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `suncex`.`airdrop` ;
+
+CREATE TABLE IF NOT EXISTS `suncex`.`airdrop` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Account_Id` INT NOT NULL,
+  `Telegram` NVARCHAR(100) NULL,
+  `Telegram_Status` INT NULL,
+  `Twitter` NVARCHAR(100) NULL,
+  `Twitter_Status` INT NULL,
+  `Facebook` NVARCHAR(100) NULL,  
+  `Facebook_Status` INT NULL,
+  `Youtube` NVARCHAR(100) NULL, 
+  `Youtube_Status` INT NULL,
+  `Created_Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Note` NVARCHAR(100) NULL,
+  PRIMARY KEY (`Id`),
+  FOREIGN KEY (`Account_Id`) REFERENCES `accounts`(`Id`))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `suncex`.`top_referrals`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `suncex`.`top_referrals`;
+
+CREATE TABLE IF NOT EXISTS `suncex`.`top_referrals` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Account_Id` INT NULL,
+  `Username` NVARCHAR(100) NULL,
+  `Referrals` INT NULL,
+  `Created_Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Note` NVARCHAR(100) NULL,
+  PRIMARY KEY (`Id`),
+  FOREIGN KEY (`Account_Id`) REFERENCES `accounts`(`Id`))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `suncex`.`registrations`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `suncex`.`registrations`;
+
+CREATE TABLE IF NOT EXISTS `suncex`.`registrations` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Account_Id` INT NULL,
+  `Registrations` INT NULL,
+  `Created_Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
+  )
+ENGINE = InnoDB;

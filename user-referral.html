@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SunCEX - Balances</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" href="img/favicon.ico">
+
+    <!-- Custom Fonts -->
+    <script defer src="font-awesome/js/fontawesome-all.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+    <link rel="stylesheet" type="text/css" href="css/user-referral.css">
+
+    <script type="text/javascript">
+        function display_c() {
+            var refresh = 1000; // refresh rate in milli seconds
+            mytime = setTimeout('startTime()', refresh)
+        }
+
+        function startTime() {
+            var strcount
+            var x = new Date()
+            var x1 = x.toUTCString(); // changing the display to UTC string
+            document.getElementById('clock').innerHTML = x1 + "/UTC";
+            tt = display_c();
+        }
+    </script>
+
+</head>
+
+<body id="style-3" onload="startTime()">
+    <!-- Cover -->
+    <div id="bg">
+        <!-- Nav -->
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/suncex_logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Hello, Đinh Tuấn Anh
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cog fa-fw"></i> Setting
+                                </a>
+                                <hr>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-sign-out-alt fa-fw"></i> Log Out
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="myInfo">
+        <div class="container">
+            <div class="row" style="padding: 20px 0;">
+                <div class="col-md-3 pd-zero">
+                    <div class="left-side">
+                        <div class="row title">
+                            <div class="col-md-12">
+                                <h5>Menu</h5>
+                            </div>
+                        </div>
+                        <div class="row title">
+                            <div class="col-md-12">
+                                <div class="side-nav">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="user-dashboard.html">
+                                                <i class="fas fa-tachometer-alt fa-fw mg-r-10"></i> Dashboard
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="user-token-sale.html">
+                                                <img src="img/suncex_icon_gray.png" class="mg-r-10" style="margin-left: 2px;"> Token Sale
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="user-balance.html">
+                                                <i class="fas fa-inbox fa-fw mg-r-10"></i> Balances
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="user-referral.html">
+                                                <i class="fas fa-users fa-fw mg-r-10"></i> Referral program
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="user-airdrop.html">
+                                                <i class="fas fa-umbrella fa-fw mg-r-10"></i> Airdrop program
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <i class="fas fa-sign-out-alt fa-fw mg-r-10"></i> Log Out
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 pd-zero">
+                    <div class="right-side">
+
+                        <div id="referral-program">
+                            <div class="row title">
+                                <div class="col-md-12">
+                                    <h5>
+                                        Referral program
+                                        <span id="clock" class="clock"></span>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="row referral mg-top-10">
+                                <div class="col-lg-4 col-md-4">
+                                    <h4>Your referral link</h4><br>
+                                    <input type="text" id="inviteLink" class="input-link" value="https://suncex.com?ref=49399">
+                                    <button class="btn-link" onclick="copyLink()">Copy</button>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4">
+                                    <h4>Your referral code</h4><br>
+                                    <input type="text" id="inviteCode" class="input-link" value="49399">
+                                    <button class="btn-link" onclick="copyCode()">Copy</button>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="card mg-top-40">
+                                        <div class="row mg-f-r-15">
+                                            <div class="col-4 col-sm-4">
+                                                <i class="fas fa-users fa-3x"></i>
+                                            </div>
+                                            <div class="col-8 col-sm-8 text-right">
+                                                <div id="amount-usd" class="huge color-orange">25</div>
+                                                <div class="sub-text color-gray">Referrals</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-sm-12 note">
+                                    <ul>
+                                        <li>Get 50 FREE SUX by registering on <span class="color-orange">https://www.suncex.com</span></li>
+                                        <li>Get additional 25 FREE SUX by inviting one friend (the more you invite, the more SUX you get).</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="referral-power">
+                            <div class="row title">
+                                <div class="col-md-12">
+                                    <h5>
+                                        Referral Power
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="row mg-top-10">
+                                <div class="col-md-12">
+                                    <section class="main-timeline-section">
+                                        <div class="timeline-start"></div>
+                                        <div class="conference-center-line"></div>
+                                        <div class="conference-timeline-content">
+
+                                            <div class="timeline-article timeline-article-top">
+                                                <div class="meta-date"></div>
+                                                <div class="content-box">
+                                                    <h5 class="text-center">100 INVITED</h5>
+                                                    <p class="text-center">+500 SUX</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="timeline-article timeline-article-bottom">
+                                                <div class="meta-date"></div>
+                                                <div class="content-box">
+                                                    <h5 class="text-center">50 INVITED</h5>
+                                                    <p class="text-center">+250 SUX</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="timeline-article timeline-article-top">
+                                                <div class="meta-date"></div>
+                                                <div class="content-box">
+                                                    <h5 class="text-center">20 INVITED</h5>
+                                                    <p class="text-center">+100 SUX</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="timeline-article timeline-article-bottom">
+                                                <div class="meta-date"></div>
+                                                <div class="content-box">
+                                                    <h5 class="text-center">10 INVITED</h5>
+                                                    <p class="text-center">+50 SUX</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="timeline-article timeline-article-top">
+                                                <div class="meta-date"></div>
+                                                <div class="content-box">
+                                                    <h5 class="text-center">5 INVITED</h5>
+                                                    <p class="text-center">+20 SUX</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="timeline-article timeline-article-bottom">
+                                                <div class="meta-date"></div>
+                                                <div class="content-box">
+                                                    <h5 class="text-center">1 INVITED</h5>
+                                                    <p class="text-center">+5 SUX</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="timeline-end"></div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="row mg-top-20">
+                                <div class="col-12 col-sm-12 note">
+                                    <ul>
+                                        <li>SUX will come to your SunCEX account after 7 - 10 days.</li>
+                                        <li>Our system will auto check if your referal is spam referal or real referal. Only the real referal will get 25 SUX!</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="modalCopy">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <i class="far fa-check-circle fa-3x color-green mg-bottom-10"></i>
+                    <h5>Copy successful!</h5>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script>
+        function copyLink() {
+            var copyText = document.getElementById("inviteLink");
+            copyText.select();
+            document.execCommand("Copy");
+            $("#modalCopy").modal();
+        }
+
+        function copyCode() {
+            var copyText = document.getElementById("inviteCode");
+            copyText.select();
+            document.execCommand("Copy");
+            $("#modalCopy").modal();
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+.right-side .referral .card {
+    border: 1px solid #ff9916;
+    background-color: #131722;
+    padding: 8px 15px 10px;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.right-side .referral .card .huge {
+    font-size: 28px;
+    line-height: normal;
+}
+
+.right-side .referral .card .sub-text {
+    font-size: 15px;
+}
+
+.right-side .note ul {
+    padding-left: 17px;
+}
+
+
+/* ===== Referral Program ===== */
+
+.right-side #referral-program h4 {
+    font-size: 1.25rem;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #ff841a), color-stop(1, #fff707));
+    background-image: gradient( linear, left top, right top, color-stop(0, #ff9916), color-stop(1, #fff707));
+    color: transparent !important;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.right-side #referral-program .input-link {
+    border: 1px solid #434857;
+    background-color: transparent;
+    border-radius: 4px;
+    width: 100%;
+    padding: 5px 10px;
+    color: #d0d5da;
+}
+
+.right-side #referral-program .btn-link {
+    background-color: transparent;
+    border: 1px solid #434857;
+    padding: 4px 25px 5px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    color: #d9a213;
+}
+
+.right-side #referral-program .input-link:focus {
+    border: 1px solid transparent;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 143, 0, 0.35);
+}
+
+.right-side #referral-program .btn-link:hover {
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid #676e82;
+}
+
+
+/*===== Bonus =====*/
+
+.main-timeline-section {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 300px;
+}
+
+.main-timeline-section .timeline-start,
+.main-timeline-section .timeline-end {
+    position: absolute;
+    background: #ff9916;
+    border-radius: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.main-timeline-section .timeline-end {
+    right: 0px;
+}
+
+.main-timeline-section .conference-center-line {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff9916;
+}
+
+.timeline-article {
+    width: 14.5%;
+    position: relative;
+    min-height: 300px;
+    float: right;
+}
+
+.timeline-article .meta-date {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #131722;
+    border: 4px solid #ff9916;
+}
+
+.timeline-article .content-box {
+    border: 1px solid #a8a8a8;
+    background-color: #222731;
+    width: 150px;
+    position: absolute;
+    top: 60%;
+    left: -65px;
+    padding: 10px;
+}
+
+.timeline-article-top .content-box:before {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom-color: #d0d5da;
+}
+
+.timeline-article-bottom .content-date {
+    top: 59%;
+}
+
+.timeline-article-bottom .content-box {
+    top: 4%;
+}
+
+.timeline-article-bottom .content-box:before {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    border: 10px solid transparent;
+    border-top-color: #d0d5da;
+}
+
+.main-timeline-section h5 {
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+.main-timeline-section p {
+    font-size: 1.5rem;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #ff841a), color-stop(1, #fff707));
+    background-image: gradient( linear, left top, right top, color-stop(0, #ff9916), color-stop(1, #fff707));
+    color: transparent !important;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+@media (max-width: 576px) {
+    .right-side .referral .card {
+        margin-top: 0;
+    }
+}
+
+
+/*==== Modal ====*/
+
+.modal-content {
+    border-radius: .2rem;
+}
+
+.modal-header {
+    border-bottom: 1px solid transparent;
+}
+
+.modal-header .close {
+    padding: .5rem .8rem;
+}
+
+.modal-footer {
+    border-top: 1px solid transparent;
+    padding: .7rem;
+}
+
+.btn {
+    padding: .25rem .85rem .3rem;
+    font-size: .8rem;
+    line-height: 1.5;
+    border-radius: 2px;
+}
+
+.modal-body {
+    padding: 1rem 1rem 0;
+}
+
+.modal-body h5 {
+    font-weight: 400;
+    color: #000;
+}
+
+.modal-dialog {
+    margin: 10% auto;
+}
+
+.btn-white {
+    background-color: #fff;
+    border: 1px solid #cccccc;
+}
+
+.btn-white:hover {
+    border: 1px solid #8a8a8a;
+}
+
+.color-green {
+    color: rgb(35, 165, 63);
+}

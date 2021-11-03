@@ -1,0 +1,124 @@
+.right-side .referral .card {
+    border: 1px solid #ff9916;
+    background-color: #131722;
+    padding: 10px 15px 15px;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.right-side .referral .card .huge {
+    font-size: 28px;
+    line-height: normal;
+}
+
+.right-side .referral .card .sub-text {
+    font-size: 15px;
+}
+
+.right-side .note ul {
+    padding-left: 17px;
+}
+
+
+/* ===== Airdrop Program ===== */
+
+#accordion {
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 4px solid #e08612;
+}
+
+#accordion h4 a {
+    display: block;
+    color: #fff;
+}
+
+#accordion h4 a:focus,
+#accordion h4 a:hover {
+    text-decoration: none;
+}
+
+#accordion .panel-default {
+    border: 1px solid #e08612;
+}
+
+#accordion .panel-default h4>a>i {
+    width: 25px;
+}
+
+#accordion .panel-body {
+    font-size: 15px;
+}
+
+#accordion .panel-body .form-group .checkbox i {
+    margin-right: 25px;
+    margin-left: 2px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#accordion .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #e08612;
+}
+
+.panel-group .panel+.panel {
+    margin-top: 12px;
+}
+
+#accordion .panel-default>.panel-heading {
+    color: #fff;
+    background-color: #e08612;
+    border-color: #e08612;
+    padding: 8px 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#accordion .panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+
+#accordion .panel-body {
+    padding: 15px 0;
+}
+
+#accordion .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+
+.input-text {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #434857;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #d0d5da;
+}
+
+.input-text:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.35);
+}
+
+.btn-submit {
+    padding: 5px 10px;
+    font-size: .9rem;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid #434857;
+    color: #d0d5da;
+}
+
+.btn-submit:hover {
+    color: #ff9916;
+    border: 1px solid #ff9916;
+}
+
+form h5 a:hover {
+    text-decoration: none;
+}
